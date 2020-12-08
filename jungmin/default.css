@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     /*    @확인용*/
-    border: 1px solid pink;
+    border: 1px solid #fff;
 }
 
 body {
@@ -63,4 +63,25 @@ body {
 #dt_table2 img {
     width: 100px;
     height: 100px;
+}
+
+hr {
+    clear: both;
+    background-color: black;
+    border: 0px;
+    height: 1px;
+}
+
+.detail_bottom {
+    margin: 40px;
+    clear: both;
+}
+
+.detail_bottom>h3 {
+    margin: 30px;
+}
+
+#choice_size img:first-child {
+    height: 100px;
+    width: 100px;
 }
