@@ -7,6 +7,8 @@
 
 /* %%%결제페이지 시작*/
 #paymentpage {
+/*    @확인용*/
+    border: 1px solid skyblue;
     width: 765px;
     height: 1000px;
     margin: 100px;
@@ -21,10 +23,23 @@
 #payheader>h1 {
     color: white;
 }
-
-#backbutton {
-    background: url('../images/%EC%95%84%EC%9D%B4%EC%BD%98/backIcon_white.png');
+/*주문목록*/
+#order {
+    overflow: hidden;
+    margin: 50px 50px;
 }
+
+#order>h1 {
+    float: left;
+}
+#backbutton {
+    float: right;
+    background-color: #888;
+    height: 35px;
+    padding: 8px 12px;
+    border-radius: 10px;
+}
+
 /* %%%결제페이지 끝*/
 
 /* %%%결제완료페이지 시작*/
