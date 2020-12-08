@@ -8,16 +8,49 @@
     <link rel="stylesheet" href="default.css">
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
     <script>
-        window.resizeTo(765, 1000);
+        $(window).load(function() {
+            window.resizeTo(765, 1000);
+        })
     </script>
 
 </head>
 
 <body>
-    <div>
-        <h1>hi</h1>
-        <h2>hello</h2>
+    <div class="detail_top">
+        <img src="../images/coffee/cafe_americano.jpg">
+        <div>
+            <table id="dt_table1">
+                <tr>
+                    <td>
+                        <h2 id="dt_menu_name">에스프레소</h2>
+                    </td>
+                    <td rowspan="2">
+                        <h1 id="dt_money">4,100원</h1>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3 id="dt_menu_name_eng">Espresso</h3>
+                    </td>
+                </tr>
+            </table>
+            <table id="dt_table2">
+                <tr>
+                    <td><img src="../images/icon/hot.png"></td>
+                    <td><img src="../images/icon/ice.png"></td>
+                </tr>
+                <tr>
+                    <td><input type="radio"> HOT</td>
+                    <td><input type="radio"> ICE</td>
+                </tr>
+            </table>
+
+
+        </div>
+
     </div>
+    <!--<hr>-->
 </body>
 
 </html>
