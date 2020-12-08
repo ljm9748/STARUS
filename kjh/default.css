@@ -10,8 +10,6 @@
 
 /*%%%결제페이지 시작*/
 #paymentpage {
-/*    @확인용*/
-    border: 1px solid skyblue;
     width: 765px;
     height: 1000px;
     margin: 100px;
