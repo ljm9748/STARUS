@@ -66,12 +66,14 @@
     width: 77px;
 }
 
+/*
 #orderlist>tr>th:first-child>img {
     height: 60px;
     width: 60px;
     border-radius: 20px;
     vertical-align: middle;
 }
+*/
 
 #orderlist>tr>th:first-child>span {
     margin-left: 20px;
