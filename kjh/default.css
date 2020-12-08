@@ -82,6 +82,7 @@
     bottom: 180px;   
     padding: 30px;
     font-family: 'Noto Sans KR', sans-serif;
+    border: 2px solid black;
 }
 
 #takeout_btn{
@@ -93,6 +94,7 @@
     bottom: 180px;
     padding: 20px;
     font-family: 'Noto Sans KR', sans-serif;
+    border: 2px solid black;
 }
 
 /*홈버튼부분*/
