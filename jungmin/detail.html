@@ -52,14 +52,19 @@
         <hr style="margin-top: 40px;">
         <h3>사이즈</h3>
         <table id="choice_size">
-            <tr>
-                <td colspan=2><img src="../images/icon/cup.png"></td>
-                <td colspan=2><img src="../images/icon/cup.png"></td>
-                <td colspan=2><img src="../images/icon/cup.png"></td>
+            <tr id="choice_img">
+                <td colspan=2><img id="img_1st" src="../images/icon/cup.png"></td>
+                <td colspan=2><img id="img_2nd" src="../images/icon/cup.png"></td>
+                <td colspan=2><img id="img_3rd" src="../images/icon/cup.png"></td>
             </tr>
             <tr>
-                <td>a</td>
-                <td>a</td>
+                <td class="dt_sizes"><input type="radio" name="size" value="Tall" id="Tall"> <label for="Tall">Tall</label></td>
+                <td class="plus_money">+0원</td>
+                <td class="dt_sizes"><input type="radio" name="size" value="Grande" id="Grande"> <label for="Grande">Grande</label></td>
+                <td class="plus_money">+500원</td>
+                <td class="dt_sizes"><input type="radio" name="size" value="Venti" id="Venti"> <label for="Venti">Venti</label></td>
+                <td class="plus_money">+1000원</td>
+
             </tr>
         </table>
 
