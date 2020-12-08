@@ -43,7 +43,8 @@
 #orderlist {
     font-size: 20px;
     border-bottom: 1px solid #AAA;
-    margin: 0px 80px 0px 80px;
+    margin: 0px 80px 30px 80px;
+    padding-bottom: 10px;
     border-collapse: separate;
     border-spacing: 0px 25px;
 }
@@ -53,9 +54,12 @@
 }
 
 #orderlist>tr>th:first-child {
-    width: 400px;
-    border: 1px solid red;
+    width: 451px;
     text-align: left;
+}
+
+#orderlist>tr>th:not(:first-child) {
+    width: 77px;
 }
 
 #orderlist>tr>th:first-child>img {
