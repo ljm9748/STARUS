@@ -73,6 +73,10 @@
     vertical-align: middle;
 }
 
+#orderlist>tr>th:first-child>span {
+    margin-left: 20px;
+}
+
 /*총금액*/
 #pricesum {
     margin: 0px 80px;
@@ -83,9 +87,16 @@
 }
 #pricesum>span:first-child {
     color: #025940;
+    margin-right: 80px;
 }
 
 /* %%%결제페이지 끝*/
+
+
+/* %%%결제수단 시작*/
+
+/* %%%결제수단 끝*/
+
 
 /* %%%결제완료페이지 시작*/
 #pcpage {
