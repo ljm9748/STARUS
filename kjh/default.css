@@ -104,6 +104,9 @@
 #paychoice>button {
     background-color: #025940;
     color: white;
+    margin: 50px 30px;
+    width: 200px;
+    height: 190px;
 }
 #paychoice>button>img {
     width: 150px;
