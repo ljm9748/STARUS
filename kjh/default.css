@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
 /*    @확인용*/
-    border: 1px solid pink;
+/*    border: 1px solid pink;*/
 }
 
 /* %%%결제페이지 시작*/
@@ -14,6 +14,16 @@
 
 #payheader {
     text-align: center;
+    height: 50px;
+    background-color: black;
+}
+
+#payheader>h1 {
+    color: white;
+}
+
+#backbutton {
+    background: url('../images/%EC%95%84%EC%9D%B4%EC%BD%98/backIcon_white.png');
 }
 /* %%%결제페이지 끝*/
 
