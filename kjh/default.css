@@ -101,16 +101,22 @@
 #paychoice {
     text-align: center;
 }
+
+#paychoice>button>img {
+    width: 120px;
+}
+
 #paychoice>button {
-    background-color: #025940;
-    color: white;
-    margin: 50px 30px;
     width: 200px;
     height: 190px;
+    background-color: #025940;
+    color: white;
+    vertical-align: middle;
+    margin: 50px 30px;
+    border-radius: 20px;
+    font-size: 23px;
 }
-#paychoice>button>img {
-    width: 150px;
-}
+
 
 /* %%%결제수단 끝*/
 
