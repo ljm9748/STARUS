@@ -2,15 +2,17 @@
     margin: 0;
     padding: 0;
 /*    @확인용*/
-    border: 1px solid pink;
+/*    border: 1px solid pink;*/
 }
 
-body {
+#page {
     width: 765px;
     height: 1000px;
     margin: 100px;
+    background-color: black;
 }
 
+/*스타어스로고부분*/
 #starusLogo {
     text-align: center;
 }
@@ -20,10 +22,25 @@ body {
     margin-top: 170px;
 }
 
+/*결제완료 및 주문번호 부분*/
 #paycompText {
     text-align: center;
+    color: white;
 }
 
 #paycomText>h1:first-child {
     margin-top: 20px;
+}
+
+/*홈버튼부분*/
+#homebuttonpart {
+    text-align: center;
+}
+
+#homebutton {
+    border: 17px solid #C22C27;
+    border-radius: 10px;
+    background-color: #C22C27;
+    color: white;
+    font-size: 35px;
 }
