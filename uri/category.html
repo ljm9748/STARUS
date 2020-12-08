@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>테스트용 네비게이션바 예왜풀리퀘안돼짜증나비용 올릴꺼아님 !!!</title>
+    <title>제이쿼리를 이용한 네비게이션바</title>
 
     <!--Noto Sans KR 폰트-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -38,7 +38,6 @@
         #nav_main {
             background-color: black;
             color: white;
-            border-radius: 20px 20px 20px 20px;
             height: 60px;
             font-family: 'Santana';
             font-size: 30px;
@@ -49,83 +48,114 @@
             border-bottom: 1px solid #999;
             height: 50px;
         }
+        
+        #nav_category_bev.underline1 {
+            border-bottom: 3px solid black;
+            font-size: 25px;
+        }
 
         #nav_category_food {
             border-bottom: 1px solid #999;
             height: 50px;
+        }
+        
+        #nav_category_food.underline2 {
+            border-bottom: 3px solid black;
+            font-size: 25px;
         }
 
         #nav_coffee {
             height: 50px;
         }
         
-        td.over{
-            background-color: black;
-            color: white;
+        /*마우스오버연초록*/
+        td.over1 {
+            background-color: #027353;
+            color: white;      
         }
-        
+        /*마우스오버찐초록*/
+        td.over2 {
+            background-color: #025940;
+            color: white;      
+        }
+        /*마우스오버갈색*/
+        td.over3 {
+            background-color: #73534C;
+            color: white;      
+        }
+        /*마우스오버팥색*/
+        td.over4 {
+            background-color: #BF988F;
+            color: white;      
+        }
 
+        #nav_detail {
+            display: none;
+        }
     </style>
 
     <script>
-      $(document).ready(function(){
-         $('#nav_detail').on({
-             
-             mouseenter: function(){
-                 $('#nav_coffee').addClass('over');
-             },
-             mouseleave: function(){
-                 $('td').removeClass('over');
-             }
-         });
-          
-      });
-    </script>
-   
-<!--   // 이벤트 연결 : on(이벤트타입, 핸들러)
-    
-            $('h1').on('click',function(){
-                
-                // 클릭이 발생하면 이벤트가 발생한 객체의 문자열을 변경
-                // this -> 이벤트가 발생한 객체
-                //$(this).html($(this).html()+'+');
-                
-                $(this).html(function(index, html){
-                    return html+'+'
-                });
-            });
-        
-
-            // 여러개의 이벤트를 등록할 때 객체형식으로 정의
+        $(document).ready(function() {
             
-            $('h1').on({
-                
+            /*각 세부 메뉴들에대해 터치가되면 색이 반전된다*/
+            $('#nav_coffee').on({
                 mouseenter: function() {
-                    $(this).addClass('over');
+                    $('#nav_coffee').addClass('over1');
                 },
-                
                 mouseleave: function() {
-                    $(this).removeClass('over');
+                    $('#nav_coffee').removeClass('over1');
+                }
+            });
+            
+            $('#nav_noncoffee').on({
+                mouseenter: function() {
+                    $('#nav_noncoffee').addClass('over3');
                 },
-                
-                click: function(event) {
-                    console.log(event);
-                    $(this).html(function(index, html){
-                        return html + '+';
-                    });
-                    //$(this).off('click');
-                    
-                    event.stopPropagation();
+                mouseleave: function() {
+                    $('#nav_noncoffee').removeClass('over3');
+                }
+            });
+            
+            $('#nav_sandwitch').on({
+                mouseenter: function() {
+                    $('#nav_sandwitch').addClass('over2');
+                },
+                mouseleave: function() {
+                    $('#nav_sandwitch').removeClass('over2');
+                }
+            });
+            
+            $('#nav_cake').on({
+                mouseenter: function() {
+                    $('#nav_cake').addClass('over4');
+                },
+                mouseleave: function() {
+                    $('#nav_cake').removeClass('over4');
                 }
             });
 
-            $('h2').hover(function(){
-                $(this).addClass('over');
-            }, function(){
-                $(this).removeClass('over');
-                $('h2').off();
+            /*음료나 푸드를 클릭(터치)하면 세부메뉴가 보여진다
+            그리고 아래 하이라이트 언더라인이 생기고 다른메뉴를
+            클릭할시 언더라인이 사라진다*/
+            
+            $('#nav_category_bev').click(function() {
+                $('#nav_detail').show();
+                $('#nav_category_bev').addClass('underline1');
+                $('#nav_category_food').removeClass('underline2');
+               
             });
-            -->
+            
+            $('#nav_category_food').click(function() {
+                $('#nav_detail').show();
+                $('#nav_category_food').addClass('underline2');
+                $('#nav_category_bev').removeClass('underline1');
+            });
+
+        
+        });
+    </script>
+
+    
 </head>
 
 <body>
@@ -133,7 +163,7 @@
         <tr>
             <td colspan="4" id="nav_main">STARUS</td>
         </tr>
-        <tr>
+        <tr id="nav_sub">
             <td colspan="2" id="nav_category_bev">음료</td>
             <td colspan="2" id="nav_category_food">푸드</td>
         </tr>
@@ -147,6 +177,4 @@
 
 
 
-</body>
-
-</html>
+</body></html>
