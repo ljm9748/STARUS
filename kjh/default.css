@@ -2,14 +2,22 @@
     margin: 0;
     padding: 0;
 /*    @확인용*/
-/*    border: 1px solid pink;*/
+    border: 1px solid pink;
 }
 
-/*결제페이지 시작*/
+/* %%%결제페이지 시작*/
+#paymentpage {
+    width: 765px;
+    height: 1000px;
+    margin: 100px;
+}
 
-/*결제페이지 끝*/
+#payheader {
+    text-align: center;
+}
+/* %%%결제페이지 끝*/
 
-/*결제완료페이지 시작*/
+/* %%%결제완료페이지 시작*/
 #pcpage {
     width: 765px;
     height: 1000px;
@@ -32,7 +40,6 @@
     text-align: center;
     color: white;
 }
-/*결제완료페이지 끝*/
 
 #paycomText>h1:first-child {
     margin-top: 20px;
@@ -50,3 +57,4 @@
     color: white;
     font-size: 35px;
 }
+/* %%%결제완료페이지 끝*/
