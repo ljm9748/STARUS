@@ -8,16 +8,68 @@
     <link rel="stylesheet" href="default.css">
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
     <script>
-        window.resizeTo(765, 1000);
+        $(window).load(function() {
+            window.resizeTo(765, 1000);
+        })
     </script>
 
 </head>
 
 <body>
-    <div>
-        <h1>hi</h1>
-        <h2>hello</h2>
+    <div class="detail_top">
+        <img src="../images/coffee/cafe_americano.jpg">
+        <div>
+            <table id="dt_table1">
+                <tr>
+                    <td>
+                        <h2 id="dt_menu_name">에스프레소</h2>
+                    </td>
+                    <td rowspan="2">
+                        <h1 id="dt_money">4,100원</h1>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3 id="dt_menu_name_eng">Espresso</h3>
+                    </td>
+                </tr>
+            </table>
+            <table id="dt_table2">
+                <tr>
+                    <td><img src="../images/icon/hot.png"></td>
+                    <td><img src="../images/icon/ice.png"></td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="hotice" value="HOT" id="HOT"> <label for="HOT">HOT</label></td>
+                    <td><input type="radio" name="hotice" value="ICE" id="ICE"> <label for="ICE">ICE</label></td>
+                </tr>
+            </table>
+        </div>
     </div>
+
+    <div class="detail_bottom">
+        <hr style="margin-top: 40px;">
+        <h3>사이즈</h3>
+        <table id="choice_size">
+            <tr id="choice_img">
+                <td colspan=2><img id="img_1st" src="../images/icon/cup.png"></td>
+                <td colspan=2><img id="img_2nd" src="../images/icon/cup.png"></td>
+                <td colspan=2><img id="img_3rd" src="../images/icon/cup.png"></td>
+            </tr>
+            <tr>
+                <td class="dt_sizes"><input type="radio" name="size" value="Tall" id="Tall"> <label for="Tall">Tall</label></td>
+                <td class="plus_money">+0원</td>
+                <td class="dt_sizes"><input type="radio" name="size" value="Grande" id="Grande"> <label for="Grande">Grande</label></td>
+                <td class="plus_money">+500원</td>
+                <td class="dt_sizes"><input type="radio" name="size" value="Venti" id="Venti"> <label for="Venti">Venti</label></td>
+                <td class="plus_money">+1000원</td>
+
+            </tr>
+        </table>
+
+    </div>
+
 </body>
 
 </html>

@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     /*    @확인용*/
-    border: 1px solid pink;
+    border: 1px solid #c4c4c4;
 }
 
 body {
@@ -26,4 +26,88 @@ body {
 
 #paycomText>h1:first-child {
     margin-top: 20px;
+}
+
+.detail_top {
+    margin: 40px;
+    margin-top: 60px;
+}
+
+.detail_top>img {
+    border-radius: 30%;
+    width: 250px;
+    height: 250px;
+    float: left;
+}
+
+#dt_table1 {
+    text-align: left;
+    margin-left: 40px;
+    width: 350px;
+    float: left;
+}
+
+#dt_money {
+    font-weight: bold;
+    color: #025940;
+}
+
+#dt_table2 {
+    width: 300px;
+    margin: 30px;
+    float: left;
+    text-align: center;
+    margin-left: 60px;
+}
+
+#dt_table2 img {
+    width: 100px;
+    height: 100px;
+}
+
+hr {
+    clear: both;
+    background-color: black;
+    border: 0px;
+    height: 1px;
+}
+
+.detail_bottom {
+    margin: 40px;
+    clear: both;
+}
+
+.detail_bottom>h3 {
+    margin: 30px;
+}
+
+#img_1st {
+    height: 100px;
+    width: 100px;
+}
+
+#img_2nd {
+    height: 130px;
+    width: 130px;
+}
+
+#img_3rd {
+    height: 150px;
+    width: 150px;
+}
+
+.plus_money {
+    color: #025940;
+    font-weight: bolder;
+    text-align: left;
+}
+
+#choice_size {
+    width: 600px;
+    text-align: center;
+    margin-left: 30px;
+}
+
+#choice_img td {
+    width: 170px;
 }
