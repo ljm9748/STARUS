@@ -1,0 +1,95 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 765px;
+    height: 1000px;
+    font-family: 'Noto Sans KR', sans-serif;
+    border: 1px solid #ddd;
+}
+
+
+/* NAV 바 */
+header {
+    height: 60px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+nav {
+    width
+    height: auto;
+    text-align: center;
+}
+
+nav>table {
+    width: 765px;
+}
+
+nav>table tr{
+    height: 50px;
+    border-bottom: 1px solid #aaa;
+}
+
+
+
+/* 메뉴 */
+div.menu {
+    padding: 30px 20px;
+    width: 530px;
+    height: 700px;
+    /* 확인용 */
+    border: 1px solid #aaa;
+    float: left;
+}
+
+div.menu>table tr, div.menu>table td {
+    margin: ;
+    padding: 10px 50px;
+    /* 확인용 */
+    /*border: 1px solid #aaa;*/
+    text-align: center;
+}
+
+div.menu h5 {
+    padding-top: 10px;
+}
+
+img {
+    border-radius: 50px;
+    width: 140px;
+}
+
+/* 장바구니 */
+
+div.cart {
+    width: 220px;
+    height: 700px;
+    border: 1px solid #aaa;
+    float: right;
+}
+
+div.cart>table {
+    width: 100%;
+    /* 확인용 */
+    border: 1px solid #aaa;
+}
+
+div.cart>table tr, div.cart>table td {
+    padding: 10px;
+    /* 확인용 */
+    border: 1px solid #aaa;
+}
+
+
+
+/* HOME/주문 버튼 */
+div.footer {
+    height: 80px;
+    /* 확인용 */
+    background-color: blanchedalmond;
+}

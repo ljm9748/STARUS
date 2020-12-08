@@ -5,58 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu Manager</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
+    <!--jQuery 라이브러리 로드-->
+    <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
 
+     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    
+    <!--부트스트랩 로드-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <!--menu.css를 로드-->
     <link rel="stylesheet" href="menu.css">
+    
+    <!-- 웹 폰트 로드-->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
     
 </head>
 
 <body>
     
-    <header><h1>STARUS</h1></header>
+    <!-- NAV바 (임시용, 교체 예정) -->
+    <header><h2>STARUS</h2></header>
     
     <nav>
         <table>
             <tr>
-                <td colspan="2"><h2>음료</h2></td>
-                <td colspan="2"><h2>푸드</h2></td>
+                <td colspan="2"><h4>음료</h4></td>
+                <td colspan="2"><h4>푸드</h4></td>
                 
             </tr>
             <tr>
-                <td><h3>-------COFFEE</h3></td>
-                <td><h3>----NON-COFFEE</h3></td>
-                <td><h3>SANDWICH</h3></td>
-                <td><h3>CAKE</h3></td>
+                <td><h5>COFFEE</h5></td>
+                <td><h5>NON-COFFEE</h5></td>
+                <td><h5>SANDWICH</h5></td>
+                <td><h5>CAKE</h5></td>
             </tr>
             
         </table>
     </nav>
     
    
+    <!-- 메뉴 -->
     <div class="menu">
         <table>
             <tr>
-                <td>에스프레소</td>
-                <td>아메리카노</td>
+                <td><img src="../images/coffee/espresso_onlyhot.jpg"><br><h5>에스프레소</h5></td>
+                <td><img src="../images/coffee/ice_cafe_americano.jpg"><br><h5>아메리카노</h5></td>
             </tr>
             <tr>
-                <td>돌체라떼</td>
-                <td>바닐라라떼</td>
+                <td><img src="../images/coffee/ice_dolce_latte.jpg"><br><h5>돌체라떼</h5></td>
+                <td><img src="../images/coffee/vanilla_latte.jpg"><br><h5>바닐라라떼</h5></td>
             </tr>
             <tr>
-                <td>카라멜마끼아또</td>
-                <td>카페모카</td>
+                <td><img src="../images/coffee/caramel_macchiato.jpg"><br><h5>카라멜마끼아또</h5></td>
+                <td><img src="../images/coffee/ice_cafe_mocha.jpg"><br><h5>카페모카</h5></td>
             </tr>
         </table>
     </div>
     
-    <!--<input img src="../img/coffee/espresso_onlyhot.jpg" width=50px>
-    -->
     
+    
+    <!-- 장바구니 -->
     <div class="cart">
         <table>
             <tr>
-                <td colspan="2">장바구니</td>
+                <td colspan="2"><img src="../images/icon/cartIcon_black.png" width=30px> <h4>장바구니</h4></td>
             </tr>
             <tr>
                 <td>에스프레소</td>
@@ -64,7 +78,10 @@
             </tr>
             <tr>
                 <td>(HOT/Tall)</td>
-                <td>+1-</td>
+                <td>
+                    <button>+</button>1
+                    <button>-</button>
+                </td>
             </tr>
             <tr>
                 <td colspan="2">
@@ -78,6 +95,9 @@
         
     </div>
     
+    
+    
+    <!-- HOME/주문 버튼 -->
     <div class="footer">
         <button>HOME</button>
         <button>주문하기</button>
