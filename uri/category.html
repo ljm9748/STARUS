@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테스트용 네비게이션바 예왜풀리퀘안돼짜증나비용 올릴꺼아님 !!!</title>
+
+    <!--Noto Sans KR 폰트-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap" rel="stylesheet">
+
+    <!--jQuery 라이브러리 로드-->
+    <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <!--부트스트랩 로드-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            width: 765px;
+            height: 1000px;
+        }
+
+        table,
+        td {
+            width: 765px;
+            text-align: center;
+            font-weight: bold;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        #nav_main {
+            background-color: black;
+            color: white;
+            border-radius: 20px 20px 20px 20px;
+            height: 60px;
+            font-family: 'Santana';
+            font-size: 30px;
+
+        }
+
+        #nav_category_bev {
+            border-bottom: 1px solid #999;
+            height: 50px;
+        }
+
+        #nav_category_food {
+            border-bottom: 1px solid #999;
+            height: 50px;
+        }
+
+        #nav_coffee {
+            height: 50px;
+        }
+        
+        td.over{
+            background-color: black;
+            color: white;
+        }
+        
+
+    </style>
+
+    <script>
+      $(document).ready(function(){
+         $('#nav_detail').on({
+             
+             mouseenter: function(){
+                 $('#nav_coffee').addClass('over');
+             },
+             mouseleave: function(){
+                 $('td').removeClass('over');
+             }
+         });
+          
+      });
+    </script>
+   
+<!--   // 이벤트 연결 : on(이벤트타입, 핸들러)
+    
+            $('h1').on('click',function(){
+                
+                // 클릭이 발생하면 이벤트가 발생한 객체의 문자열을 변경
+                // this -> 이벤트가 발생한 객체
+                //$(this).html($(this).html()+'+');
+                
+                $(this).html(function(index, html){
+                    return html+'+'
+                });
+            });
+        
+
+            // 여러개의 이벤트를 등록할 때 객체형식으로 정의
+            
+            $('h1').on({
+                
+                mouseenter: function() {
+                    $(this).addClass('over');
+                },
+                
+                mouseleave: function() {
+                    $(this).removeClass('over');
+                },
+                
+                click: function(event) {
+                    console.log(event);
+                    $(this).html(function(index, html){
+                        return html + '+';
+                    });
+                    //$(this).off('click');
+                    
+                    event.stopPropagation();
+                }
+            });
+
+            $('h2').hover(function(){
+                $(this).addClass('over');
+            }, function(){
+                $(this).removeClass('over');
+                $('h2').off();
+            });
+            -->
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td colspan="4" id="nav_main">STARUS</td>
+        </tr>
+        <tr>
+            <td colspan="2" id="nav_category_bev">음료</td>
+            <td colspan="2" id="nav_category_food">푸드</td>
+        </tr>
+        <tr id="nav_detail">
+            <td id="nav_coffee">COFFEE</td>
+            <td id="nav_noncoffee">NON-COFFEE</td>
+            <td id="nav_sandwitch">SANDWITCH</td>
+            <td id="nav_cake">CAKE</td>
+        </tr>
+    </table>
+
+
+
+</body>
+
+</html>
