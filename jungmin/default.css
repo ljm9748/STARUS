@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    /*    @확인용*/
+    border: 1px solid pink;
+}
+
+body {
+    width: 765px;
+    height: 1000px;
+    margin: 100px;
+}
+
+#starusLogo {
+    text-align: center;
+}
+
+#starusLogo>img {
+    height: 270px;
+    margin-top: 170px;
+}
+
+#paycompText {
+    text-align: center;
+}
+
+#paycomText>h1:first-child {
+    margin-top: 20px;
+}
