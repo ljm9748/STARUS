@@ -51,19 +51,42 @@
     border-collapse: separate;
     border-spacing: 0px 25px;
 }
+#listone {
+    color: #025940;
+    font-size: 20px;
+}
+#ordermenuimg {
+    height: 50px;
+    width: 50px;
+    border-radius: 20px;
+    vertical-align: middle;
+    margin-right: 20px;
+}
+#orderlistrowone {
+/*    width: 451px;*/
+    width: 451px;
+    text-align: left;
+}
+#orderlistrowtwo {
+    width: 77px;
+}
 
+/*
 #orderlist>tr:first-child {
     color: #025940;
     font-size: 20px;
+끝
 }
 
 #orderlist>tr>th:first-child {
     width: 451px;
     text-align: left;
+끝
 }
 
 #orderlist>tr>th:not(:first-child) {
     width: 77px;
+끝
 }
 
 #orderlist>tr>th:first-child>img {
@@ -71,11 +94,13 @@
     width: 50px;
     border-radius: 20px;
     vertical-align: middle;
+끝
 }
 
 #orderlist>tr>th:first-child>span {
     margin-left: 20px;
 }
+*/
 
 /*총금액*/
 #pricesum {
