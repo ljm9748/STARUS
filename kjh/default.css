@@ -5,12 +5,27 @@
     border: 1px solid pink;
 }
 
-body {
+/* %%%결제페이지 시작*/
+#paymentpage {
     width: 765px;
     height: 1000px;
     margin: 100px;
 }
 
+#payheader {
+    text-align: center;
+}
+/* %%%결제페이지 끝*/
+
+/* %%%결제완료페이지 시작*/
+#pcpage {
+    width: 765px;
+    height: 1000px;
+    margin: 100px;
+    background-color: black;
+}
+
+/*스타어스로고부분*/
 #starusLogo {
     text-align: center;
 }
@@ -20,36 +35,42 @@ body {
     margin-top: 170px;
 }
 
+/*결제완료 및 주문번호 부분*/
 #paycompText {
     text-align: center;
+    color: white;
 }
 
 #paycomText>h1:first-child {
     margin-top: 20px;
 }
 
+HEAD
 #main_wrap {
     width: 765px;
     height: 1000px;
     border: 1px solid black;
-    position: relative;
+    position:relative;
 }
 
-img {
+#bg_top {
     width: 765px;    
     position: absolute;
 }
 
 #bg_bottom{
+    width: 765px;
     position:absolute;
     bottom:0px;
     left: 20px;
 }
 
 #main_logo{
-    top: 230px;
-    left: 75px;
-    width: 630px;
+    width: 500px;
+    position: absolute;
+    top: 130px;
+    left: 160px;
+    
 }
 
 #store_btn{
@@ -67,7 +88,21 @@ img {
     background-color: #027353;
     width: 200px;
     height: 100px;
-    right: 150px;
+    left: 450px;
     bottom: 180px;
     padding: 20px;
 }
+
+/*홈버튼부분*/
+#homebuttonpart {
+    text-align: center;
+}
+
+#homebutton {
+    border: 17px solid #C22C27;
+    border-radius: 10px;
+    background-color: #C22C27;
+    color: white;
+    font-size: 35px;
+}
+/* %%%결제완료페이지 끝*/
