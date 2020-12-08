@@ -45,7 +45,7 @@
     margin-top: 20px;
 }
 
-HEAD
+
 #main_wrap {
     width: 765px;
     height: 1000px;
@@ -66,10 +66,10 @@ HEAD
 }
 
 #main_logo{
-    width: 500px;
+    width: 600px;
     position: absolute;
-    top: 130px;
-    left: 160px;
+    top: 200px;
+    left: 100px;
     
 }
 
@@ -78,9 +78,10 @@ HEAD
     background-color: #027353;
     width: 200px;
     height: 100px;
-    left: 150px;
+    left: 140px;
     bottom: 180px;   
     padding: 30px;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 #takeout_btn{
@@ -91,6 +92,7 @@ HEAD
     left: 450px;
     bottom: 180px;
     padding: 20px;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 /*홈버튼부분*/
