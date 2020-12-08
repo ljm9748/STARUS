@@ -8,7 +8,7 @@
     font-family: 'Noto Sans KR', sans-serif;
 }
 
-/* %%%결제페이지 시작*/
+/*%%%결제페이지 시작*/
 #paymentpage {
 /*    @확인용*/
     border: 1px solid skyblue;
@@ -42,7 +42,7 @@
     padding: 8px 12px;
     border-radius: 10px;
 }
-/*주문목록*/
+
 #orderlist {
     font-size: 18px;
     border-bottom: 1px solid #AAA;
@@ -66,14 +66,12 @@
     width: 77px;
 }
 
-/*
 #orderlist>tr>th:first-child>img {
-    height: 60px;
-    width: 60px;
+    height: 50px;
+    width: 50px;
     border-radius: 20px;
     vertical-align: middle;
 }
-*/
 
 #orderlist>tr>th:first-child>span {
     margin-left: 20px;
@@ -92,7 +90,7 @@
     margin-right: 80px;
 }
 
-/* %%%결제페이지 끝*/
+/*%%%결제페이지 끝*/
 
 
 /* %%%결제수단 시작*/
