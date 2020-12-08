@@ -23,7 +23,7 @@
 #payheader>h1 {
     color: white;
 }
-/*주문목록*/
+/*주문*/
 #order {
     overflow: hidden;
     margin: 50px 50px;
@@ -38,6 +38,10 @@
     height: 35px;
     padding: 8px 12px;
     border-radius: 10px;
+}
+/*주문목록*/
+#orderlist {
+
 }
 
 /* %%%결제페이지 끝*/
