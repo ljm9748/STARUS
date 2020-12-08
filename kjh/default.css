@@ -40,8 +40,13 @@
     border-radius: 10px;
 }
 /*주문목록*/
-#orderlist {
-
+#orderlist>tr>th:first-child {
+    line-height: normal;
+}
+#orderlist>tr>th:first-child>img {
+    height: 60px;
+    width: 60px;
+    border-radius: 20px;
 }
 
 /* %%%결제페이지 끝*/
