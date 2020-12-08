@@ -1,12 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
 /*    @확인용*/
 /*    border: 1px solid pink;*/
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 /* %%%결제페이지 시작*/
 #paymentpage {
+/*    @확인용*/
+    border: 1px solid skyblue;
     width: 765px;
     height: 1000px;
     margin: 100px;
@@ -21,11 +26,100 @@
 #payheader>h1 {
     color: white;
 }
-
-#backbutton {
-    background: url('../images/%EC%95%84%EC%9D%B4%EC%BD%98/backIcon_white.png');
+/*주문*/
+#order {
+    overflow: hidden;
+    margin: 50px 50px 20px 80px;
 }
+
+#order>h1 {
+    float: left;
+}
+#backbutton {
+    float: right;
+    background-color: #888;
+    height: 35px;
+    padding: 8px 12px;
+    border-radius: 10px;
+}
+/*주문목록*/
+#orderlist {
+    font-size: 18px;
+    border-bottom: 1px solid #AAA;
+    margin: 0px 80px 30px 80px;
+    padding-bottom: 10px;
+    border-collapse: separate;
+    border-spacing: 0px 25px;
+}
+
+#orderlist>tr:first-child {
+    color: #025940;
+    font-size: 20px;
+}
+
+#orderlist>tr>th:first-child {
+    width: 451px;
+    text-align: left;
+}
+
+#orderlist>tr>th:not(:first-child) {
+    width: 77px;
+}
+
+#orderlist>tr>th:first-child>img {
+    height: 60px;
+    width: 60px;
+    border-radius: 20px;
+    vertical-align: middle;
+}
+
+#orderlist>tr>th:first-child>span {
+    margin-left: 20px;
+}
+
+/*총금액*/
+#pricesum {
+    margin: 0px 80px;
+    font-size: 20px;
+    font-weight: bolder;
+    overflow: hidden;
+    float: right;
+}
+#pricesum>span:first-child {
+    color: #025940;
+    margin-right: 80px;
+}
+
 /* %%%결제페이지 끝*/
+
+
+/* %%%결제수단 시작*/
+#cardchoice {
+    margin: 100px 80px;
+}
+
+#paychoice {
+    text-align: center;
+}
+
+#paychoice>button>img {
+    width: 120px;
+}
+
+#paychoice>button {
+    width: 200px;
+    height: 190px;
+    background-color: #025940;
+    color: white;
+    vertical-align: middle;
+    margin: 50px 30px;
+    border-radius: 20px;
+    font-size: 23px;
+}
+
+
+/* %%%결제수단 끝*/
+
 
 /* %%%결제완료페이지 시작*/
 #pcpage {
