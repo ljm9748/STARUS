@@ -5,6 +5,11 @@
 /*    border: 1px solid pink;*/
 }
 
+/*결제페이지 시작*/
+
+/*결제페이지 끝*/
+
+/*결제완료페이지 시작*/
 #pcpage {
     width: 765px;
     height: 1000px;
@@ -27,6 +32,7 @@
     text-align: center;
     color: white;
 }
+/*결제완료페이지 끝*/
 
 #paycomText>h1:first-child {
     margin-top: 20px;
