@@ -94,6 +94,20 @@
 
 
 /* %%%결제수단 시작*/
+#cardchoice {
+    margin: 100px 80px;
+}
+
+#paychoice {
+    text-align: center;
+}
+#paychoice>button {
+    background-color: #025940;
+    color: white;
+}
+#paychoice>button>img {
+    width: 150px;
+}
 
 /* %%%결제수단 끝*/
 
