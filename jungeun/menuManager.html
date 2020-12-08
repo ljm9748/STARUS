@@ -18,6 +18,9 @@
     <!--menu.css를 로드-->
     <link rel="stylesheet" href="menu.css">
     
+    <!--menu.js를 로드-->
+    <script src="menu.js"></script>
+    
     <!-- 웹 폰트 로드-->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
     
@@ -25,7 +28,7 @@
 
 <body>
     
-    <!-- NAV바 (임시용, 교체 예정) -->
+    <!-- NAV바 (임시용) -->
     <header><h2>STARUS</h2></header>
     
     <nav>
@@ -46,20 +49,37 @@
     </nav>
     
    
-    <!-- 메뉴 -->
-    <div class="menu">
+    <!-- 메뉴 : **추후에 상세페이지 링크 넣기-->
+    <div class="coffee">
         <table>
             <tr>
-                <td><img src="../images/coffee/espresso_onlyhot.jpg"><br><h5>에스프레소</h5></td>
-                <td><img src="../images/coffee/ice_cafe_americano.jpg"><br><h5>아메리카노</h5></td>
+                <td>
+                    <a href=""><img src="../images/coffee/espresso_onlyhot.jpg"></a>
+                    <br><h5>에스프레소</h5>
+                </td>
+                <td>
+                    <a href=""><img src="../images/coffee/ice_cafe_americano.jpg"></a><br>
+                    <h5>아메리카노</h5>
+                </td>
             </tr>
             <tr>
-                <td><img src="../images/coffee/ice_dolce_latte.jpg"><br><h5>돌체라떼</h5></td>
-                <td><img src="../images/coffee/vanilla_latte.jpg"><br><h5>바닐라라떼</h5></td>
+                <td>
+                    <a href=""><img src="../images/coffee/ice_dolce_latte.jpg"></a><br>
+                    <h5>돌체라떼</h5>
+                </td>
+                <td>
+                    <a href=""><img src="../images/coffee/vanilla_latte.jpg"></a><br><h5>바닐라라떼</h5>
+                </td>
             </tr>
             <tr>
-                <td><img src="../images/coffee/caramel_macchiato.jpg"><br><h5>카라멜마끼아또</h5></td>
-                <td><img src="../images/coffee/ice_cafe_mocha.jpg"><br><h5>카페모카</h5></td>
+                <td>
+                    <a href=""><img src="../images/coffee/caramel_macchiato.jpg"></a><br>
+                    <h5>카라멜마끼아또</h5>
+                </td>
+                <td>
+                    <a href=""><img src="../images/coffee/ice_cafe_mocha.jpg"></a><br>
+                    <h5>카페모카</h5>
+                </td>
             </tr>
         </table>
     </div>
@@ -67,46 +87,62 @@
     
     
     <!-- 장바구니 -->
+    
     <div class="cart">
-        <table>
-            <tr>
-                <td colspan="2"><img src="../images/icon/cartIcon_black.png" width=30px> <h4>장바구니</h4></td>
-            </tr>
+        
+        <!--장바구니 헤더-->
+        <div class="title">
+            <h4 style="color:#025936"><img src="../images/icon/cartIcon_black.png" width=40px> 장바구니</h4>
+        </div>
+        
+        <!--장바구니 아이템-->
+        <table class="cartItem">
             <tr>
                 <td>에스프레소</td>
                 <td>4,100원</td>
             </tr>
             <tr>
-                <td>(HOT/Tall)</td>
-                <td>
-                    <button>+</button>1
-                    <button>-</button>
+                <td>(HOT / Tall)</td>
+                <td style="color:#025936">
+                    <a href="javascript:change_qty()"><img src="../images/icon/plus.png" width=15px></a> 1 
+                    <img src="../images/icon/minus.png" width=15px>
                 </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    총 주문 금액 :
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">9,600원</td>
             </tr>
         </table>
         
+        <!--총 주문 금액-->
+        <table class="totalPrice">
+            <tr>
+                <td colspan="2">
+                    <h4>총 주문 금액 :</h4>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><h4 style="color:#025936">9,600원</h4></td>
+            </tr>
+        </table>
+        
+        <button id="reset"><h5>전체 초기화</h5></button>
     </div>
     
     
     
-    <!-- HOME/주문 버튼 -->
+    <!-- 홈/주문 버튼 -->
+    <hr>
     <div class="footer">
-        <button>HOME</button>
-        <button>주문하기</button>
+        <button id="home"><h4>HOME</h4></button>
+        <button id="order"><h4>주문하기</h4></button>
     </div>
     
 </body>
 </html>
 
+<script>
 
+    /* 장바구니 */
+    $(".totalPrice tr:odd").css("text-align", "right");
+
+</script>
 
 
 

@@ -12,7 +12,8 @@ body {
 }
 
 
-/* NAV 바 */
+/* NAV 바 (임시용) */
+
 header {
     height: 60px;
     background-color: black;
@@ -38,16 +39,17 @@ nav>table tr{
 
 
 /* 메뉴 */
-div.menu {
+
+div.coffee {
     padding: 30px 20px;
     width: 530px;
     height: 700px;
     /* 확인용 */
-    border: 1px solid #aaa;
+    /*border: 1px solid #aaa;*/
     float: left;
 }
 
-div.menu>table tr, div.menu>table td {
+.coffee>table tr, .coffee>table td {
     margin: ;
     padding: 10px 50px;
     /* 확인용 */
@@ -55,41 +57,87 @@ div.menu>table tr, div.menu>table td {
     text-align: center;
 }
 
-div.menu h5 {
+.coffee h5 {
     padding-top: 10px;
 }
 
-img {
+.coffee img {
     border-radius: 50px;
     width: 140px;
 }
 
 /* 장바구니 */
 
-div.cart {
-    width: 220px;
+.cart {
+    width: 230px;
     height: 700px;
-    border: 1px solid #aaa;
+    background-color: #eee;
     float: right;
 }
 
-div.cart>table {
+.title {
+    padding: 20px;
+    text-align: center;
+}
+
+.cartItem {
     width: 100%;
+    text-align: center;
     /* 확인용 */
     border: 1px solid #aaa;
 }
 
-div.cart>table tr, div.cart>table td {
+.cart tr, .cart td {
+    /* 확인용 */
+    border: 1px solid #aaa;
+}
+
+a, img {
+    display: inline;
+}
+
+.totalPrice {
+    width: 230px;
+    position: absolute;
+    bottom: 0px;
+}
+
+.totalPrice td {
     padding: 10px;
-    /* 확인용 */
-    border: 1px solid #aaa;
+}
+
+#reset {
+    width: 200px;
+    background-color: grey;
+    color: white;
+    position: absolute;
+    bottom: -56px;
+    margin: 15px;
 }
 
 
 
-/* HOME/주문 버튼 */
-div.footer {
-    height: 80px;
+/* 홈/주문 버튼 */
+
+.footer {
+    clear: both;
+    padding: 15px 70px;
+    border-top: 3px solid #ddd;
     /* 확인용 */
-    background-color: blanchedalmond;
+    /*background-color: blanchedalmond;*/
+}
+
+.footer button {
+    width: 300px;
+    height: 50px;
+}
+
+#home {
+    background-color: #c22c27;
+    color: white;
+}
+
+#order {
+    background-color: #025936;
+    color: white;
 }
