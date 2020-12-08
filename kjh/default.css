@@ -235,5 +235,7 @@
     background-color: #C22C27;
     color: white;
     font-size: 35px;
+    font-weight: bold;
+    text-decoration: none;
 }
 /* %%%결제완료페이지 끝*/
