@@ -41,27 +41,64 @@ nav>table tr{
 /* 메뉴 */
 
 div.coffee {
-    padding: 30px 20px;
+    padding: 40px 20px;
     width: 530px;
     height: 700px;
     /* 확인용 */
     /*border: 1px solid #aaa;*/
     float: left;
+    display: none;
 }
 
-.coffee>table tr, .coffee>table td {
-    margin: ;
-    padding: 10px 50px;
+div.non-coffee {
+    padding: 40px 20px;
+    width: 530px;
+    height: 700px;
+    /* 확인용 */
+    /*border: 1px solid #aaa;*/
+    float: left;
+    display: none;
+}
+
+div.sandwich {
+    padding: 40px 20px;
+    width: 530px;
+    height: 700px;
+    /* 확인용 */
+    /*border: 1px solid #aaa;*/
+    float: left;
+    display: none;
+}
+
+div.cake {
+    padding: 40px 20px;
+    width: 530px;
+    height: 700px;
+    /* 확인용 */
+    /*border: 1px solid #aaa;*/
+    float: left;
+    /*display: none;*/
+}
+
+.coffee>table tr, .coffee>table td, .non-coffee>table tr, .non-coffee>table td, .sandwich>table tr, .sandwich>table td, .cake>table tr, .cake>table td {
+    padding: px;
     /* 확인용 */
     /*border: 1px solid #aaa;*/
     text-align: center;
 }
 
-.coffee h5 {
-    padding-top: 10px;
+ .coffee a, .non-coffee a, .sandwich a, .cake a {
+    padding: 60px 50px;
+    /*border: 1px solid #aaa;*/
 }
 
-.coffee img {
+.coffee h5, .non-coffee h5, .sandwich h5, .cake h5 {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.coffee img, .non-coffee img, .sandwich img, .cake img {
     border-radius: 50px;
     width: 140px;
 }
@@ -84,12 +121,12 @@ div.coffee {
     width: 100%;
     text-align: center;
     /* 확인용 */
-    border: 1px solid #aaa;
+    /*border: 1px solid #aaa;*/
 }
 
 .cart tr, .cart td {
     /* 확인용 */
-    border: 1px solid #aaa;
+    /*border: 1px solid #aaa;*/
 }
 
 a, img {
@@ -103,7 +140,7 @@ a, img {
 }
 
 .totalPrice td {
-    padding: 10px;
+    padding: 5px 20px;
 }
 
 #reset {
