@@ -1,0 +1,143 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 765px;
+    height: 1000px;
+    font-family: 'Noto Sans KR', sans-serif;
+    border: 1px solid #ddd;
+}
+
+
+/* NAV 바 (임시용) */
+
+header {
+    height: 60px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+nav {
+    width
+    height: auto;
+    text-align: center;
+}
+
+nav>table {
+    width: 765px;
+}
+
+nav>table tr{
+    height: 50px;
+    border-bottom: 1px solid #aaa;
+}
+
+
+
+/* 메뉴 */
+
+div.coffee {
+    padding: 30px 20px;
+    width: 530px;
+    height: 700px;
+    /* 확인용 */
+    /*border: 1px solid #aaa;*/
+    float: left;
+}
+
+.coffee>table tr, .coffee>table td {
+    margin: ;
+    padding: 10px 50px;
+    /* 확인용 */
+    /*border: 1px solid #aaa;*/
+    text-align: center;
+}
+
+.coffee h5 {
+    padding-top: 10px;
+}
+
+.coffee img {
+    border-radius: 50px;
+    width: 140px;
+}
+
+/* 장바구니 */
+
+.cart {
+    width: 230px;
+    height: 700px;
+    background-color: #eee;
+    float: right;
+}
+
+.title {
+    padding: 20px;
+    text-align: center;
+}
+
+.cartItem {
+    width: 100%;
+    text-align: center;
+    /* 확인용 */
+    border: 1px solid #aaa;
+}
+
+.cart tr, .cart td {
+    /* 확인용 */
+    border: 1px solid #aaa;
+}
+
+a, img {
+    display: inline;
+}
+
+.totalPrice {
+    width: 230px;
+    position: absolute;
+    bottom: 0px;
+}
+
+.totalPrice td {
+    padding: 10px;
+}
+
+#reset {
+    width: 200px;
+    background-color: grey;
+    color: white;
+    position: absolute;
+    bottom: -56px;
+    margin: 15px;
+}
+
+
+
+/* 홈/주문 버튼 */
+
+.footer {
+    clear: both;
+    padding: 15px 70px;
+    border-top: 3px solid #ddd;
+    /* 확인용 */
+    /*background-color: blanchedalmond;*/
+}
+
+.footer button {
+    width: 300px;
+    height: 50px;
+}
+
+#home {
+    background-color: #c22c27;
+    color: white;
+}
+
+#order {
+    background-color: #025936;
+    color: white;
+}
