@@ -5,6 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <link rel="stylesheet" href="cart.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js">
+    $(document).ready(function() {
+        /*+클릭하면 증가*/
+        $('.plus').click(function(){
+            var n = $('.plus').index(this);
+            var num = $(".num:eq("+n+")").val();
+            num = $(".num:eq("+n+")").val(num*1+1);
+        });
+});
+        
+        
+    </script>
 </head>
 
 <body>
@@ -14,15 +26,28 @@
         <div id="text1">장바구니</div>
         <!--장바구니 속-->
         <div id="menu">
-            <table>
+            <table id="table">
             <tr>
+                <td class="td1">에스프레소</td>
+                <td class="td2">4,100원</td>
+            </tr>
+            <tr>
+                <td class="td3">(HOT/Tall)</td>
+                <td class="td4">
+                <input class="minus" value="-" type="button" count_range="m">
+                <input class="count" value="1" readonly name="num">
+                <input class="plus" value="+" type="button" count_range="p">
+                </td>
+            </tr>
+                
+            <!--    
                 <div id="menutext1">에스프레소</div>
                 <div id="menutext2">(HOT/Tall)</div>
                 <div id="menutext3">4,100원</div>
                 <div id="menunum">01</div>
                 <div id="plus"><img src="plus.png"></div>
                 <div id="minus"><img src="minus.png"></div>
-            </tr>
+            -->            
                 
             </table>
         </div>

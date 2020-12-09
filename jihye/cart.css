@@ -33,58 +33,33 @@
 /*중간부분*/
 #menu {
     position:absolute;
-    width: 198px;
+    width: 200px;
     height: 520px;
     top:90px;
+    background-color:#fafafa;
+    border-radius: 10px 10px 0px 0px;
 }
-#menutext1{
-    position: absolute;
-    top:10px;
-    left:10px;
-    font-weight: bold;
+#table {
+    width: 190px;
+}
+#table input {
+    width: 20px;
+}
+.td2 {
+     text-align: right;
+}
+.td4 {
+     text-align: right;
+}
+.td1 {
+    text-align: center;
     color: #002D47;
-}
-#menutext2{
-    position: absolute;
-    top:34px;
-    left:10px;
     font-weight: bold;
+}
+.td3 {
+    text-align: center;
     color: #002D47;
-}
-#menutext3{
-    position: absolute;
-    top:10px;
-    right:10px;
-}
-#menunum{
-    position: absolute;
-    top:34px;
-    right:40px;
-}
-#plus img{
-    width: 20px;
-    height: 20px;
-}
-#plus{
-    position: absolute;
-    top:36px;
-    right:65px;
-    width: 20px;
-    height: 20px;
-    background-color: #BFBFBF;
-}
-
-#minus img{
-    width: 20px;
-    height: 20px;
-}
-#minus {
-    position: absolute;
-    top:36px;
-    right:11px;
-    width: 20px;
-    height: 20px;
-    background-color: #BFBFBF;
+    font-weight: bold;
 }
 
 /*끝부분*/
@@ -104,7 +79,7 @@ font-weight: bolder;
 left:10px;
 top:5px;
 color: #282828;
-text-shadow: 0.5px 0.5px 0.1px;    
+\  
 }
 
 #text3 {
