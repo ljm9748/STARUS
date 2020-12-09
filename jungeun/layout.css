@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 765px;
+    height: 1000px;
+    font-family: 'Noto Sans KR', sans-serif;
+    border: 2px solid #aaa;
+    
+}
+
+.layout {
+    background-color: greenyellow;
+}
+
+/* NAV 바 (임시용) */
+
+header {
+    height: 60px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    line-height: 60px;
+}
+
+nav {
+    width
+    height: auto;
+    text-align: center;
+}
+
+nav>table {
+    width: 765px;
+}
+
+nav>table tr{
+    height: 50px;
+    border-bottom: 1px solid #aaa;
+}
+
+
+/* 메뉴 */
+
+div.coffee {
+    padding: 60px 20px;
+    width: 530px;
+    height: 750px;
+    border: 1px solid #aaa;
+    background-color: antiquewhite;
+    float: left;
+    /*display: inline-block;*/
+    /*display: none;*/
+}
+
+
+ .coffee a, .non-coffee a, .sandwich a, .cake a {
+    padding: 60px 50px;
+    /*border: 1px solid #aaa;*/
+}
+
+.coffee h5, .non-coffee h5, .sandwich h5, .cake h5 {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.coffee img, .non-coffee img, .sandwich img, .cake img {
+    border-radius: 50px;
+    width: 140px;
+}
+
+/* 장바구니 */
+
+.cart {
+    width: 230px;
+    height: 750px;
+    float: left;
+    border: 1px solid blue;
+}
+
+.cartContent {
+    width: 230px;
+    height: 600px;
+    background-color: #eee;
+    border: 1px solid pink;
+    /*float: right;*/
+    /*display: inline-block;*/
+}
+
+.title {
+    padding: 20px;
+    text-align: center;
+}
+
+.cartItem {
+    width: 100%;
+    text-align: center;
+    border: 1px solid #aaa;
+}
+
+.cartContent tr, .cartContent td {
+    border: 1px solid #aaa;
+}
+
+/* 총주문금액/초기화 */
+.cartFooter {
+    width: auto;
+    height: 150px;
+    background-color: #eee;
+    /*display: inline-block;*/
+    /*float: right;*/
+    border: 1px solid pink;
+}
+
+.totalPrice {
+    width: 230px;
+    position: ;
+    bottom: 0px;
+}
+
+.totalPrice td {
+    padding: 5px 20px;
+}
+
+#reset {
+    width: 200px;
+    background-color: grey;
+    color: white;
+    position: ;
+    bottom: ;
+    margin: ;
+}
+
+
+
+/* 홈/주문 버튼 */
+
+.footer {
+    clear: both;
+    height: 90px;
+    padding: 15px 70px;
+    border-top: 3px solid #ddd;
+    /* 확인용 */
+    background-color: ;
+}
+
+.footer button {
+    width: 300px;
+    height: 50px;
+}
+
+#home {
+    background-color: #c22c27;
+    color: white;
+}
+
+#order {
+    background-color: #025936;
+    color: white;
+}
+
