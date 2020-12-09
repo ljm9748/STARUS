@@ -105,3 +105,6 @@ font-weight: bolder;
     text-align: center;
     color: white;
 }
+a{
+    text-decoration: none;
+}
