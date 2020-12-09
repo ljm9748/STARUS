@@ -132,6 +132,9 @@ div.cake {
     /*border: 1px solid #aaa;*/
 }
 
+.cartItem td {
+    /*border: 1px solid #aaa;*/
+}
 
 /* 총주문금액/초기화 전체 */
 .cartFooter {
@@ -154,14 +157,24 @@ div.cake {
     text-align: right;
 }
 
-/*초기화 버튼*/
-#reset {
-    width: 200px;
+/*선택삭제 버튼*/
+#delete {
+    width: 40%;
     background-color: grey;
     color: white;
     position: relative;
     top: 10px;
     left: 15px;
+}
+
+/*전체삭제 버튼*/
+#reset {
+    width: 40%;
+    background-color: grey;
+    color: white;
+    position: relative;
+    top: 10px;
+    left: 30px;
 }
 
 
