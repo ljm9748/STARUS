@@ -32,6 +32,7 @@
 }
 /*중간부분*/
 #menu {
+    overflow:scroll;
     position:absolute;
     width: 200px;
     height: 520px;
@@ -40,7 +41,8 @@
     border-radius: 10px 10px 0px 0px;
 }
 #table {
-    width: 190px;
+    width: 174px;
+    font-size: 15px;
 }
 #table input {
     width: 20px;
@@ -101,6 +103,8 @@ font-weight: bolder;
     top:94px;
     left:20px;
     text-align: center;
-    line-height:30px;
     color: white;
+}
+a{
+    text-decoration: none;
 }

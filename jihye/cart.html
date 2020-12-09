@@ -6,26 +6,17 @@
     <title></title>
     <link rel="stylesheet" href="cart.css">
     <script src="https://code.jquery.com/jquery-1.12.4.min.js">
-    $(document).ready(function() {
-        /*+클릭하면 증가*/
-        $('.plus').click(function(){
-            var n = $('.plus').index(this);
-            var num = $(".num:eq("+n+")").val();
-            num = $(".num:eq("+n+")").val(num*1+1);
-        });
-});
-        
-        
     </script>
+            
 </head>
 
 <body>
     <aside>
-    <div id="cartlayout">
+    <div id="cartlayout" >
         <div id="carticon"><img src="../images/icon/cartIcon_black.png"></div>
         <div id="text1">장바구니</div>
         <!--장바구니 속-->
-        <div id="menu">
+        <div id="menu" >
             <table id="table">
             <tr>
                 <td class="td1">에스프레소</td>
@@ -57,10 +48,12 @@
             <div id="hrline"><hr></div>
             <div id="text2">총 주문 금액:</div>
             <div id="text3">9,600원</div>
-            <div id="text4">전체 초기화</div>
+            <a id="text4" href="card.html">전체 초기화</a> <!--새로고침할 페이지 주소-->
+
         </div>
 
     </div>
     </aside>
+     <script src="cart.js"></script>
 </body>
 </html>
