@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>STARUS - PAYMENT</title>
-    <link rel="stylesheet" href="pay.css">
+    <link rel="stylesheet" href="paytest.css">
 
     <!--
     jQuery 라이브러리 로드
@@ -28,42 +28,29 @@
                 <h1>주문목록</h1>
                 <img src="../images/icon/backIcon_white.png" id="backbutton" onClick="history.go(-1)" style="cursor:pointer">
             </div>
-            <table id="orderlist">
-                <tr id="listone">
-                    <th id="orderlistcolone">메뉴</th>
-                    <th id="orderlistcoltwo">수량</th>
-                    <th>금액</th>
+
+            <!--            주문 테이블 헤드-->
+            <table class="orderthead">
+                <tr>
+                    <td>메뉴</td>
+                    <td>수량</td>
+                    <td>가격</td>
                 </tr>
-                <tbody id="ordertbody">
-                    <tr>
-                        <th id="orderlistcolone">
-                            <input type="hidden" name="index" id="index">
-                            <img src="../images/coffee/espresso_onlyhot.jpg" id="ordermenuimg">
-                            <span>에스프레소 ICE / GRANDE</span>
-                        </th>
-                        <th>1</th>
-                        <th>4,100원</th>
-                    </tr>
-                    <tr>
-                        <th id="orderlistcolone">
-                            <input type="hidden" name="index" id="index">
-                            <img src="../images/cake/RealStrawberryTiramisu.png" id="ordermenuimg">
-                            <span>스트로베리 티라미수</span>
-                        </th>
-                        <th>1</th>
-                        <th>7,500원</th>
-                    </tr>
-                    <tr>
-                        <th id="orderlistcolone">
-                            <input type="hidden" name="index" id="index">
-                            <img src="../images/non-coffee/grapefruit_honey_black_tea.jpg" id="ordermenuimg">
-                            <span>자몽 허니 블랙 티 HOT / GRANDE</span>
-                        </th>
-                        <th>1</th>
-                        <th>5,300원</th>
-                    </tr>
-                </tbody>
             </table>
+
+            <!--            주문 테이블 목록-->
+            <div class="orderlist">
+                <table class="ordertbody">
+                    <tr>
+                        <td>
+                            <img src="../images/coffee/cafe_americano.jpg" style="width: 50px; height: 50px;">
+                        </td>
+                        <td>1</td>
+                        <td>4,100원</td>
+                    </tr>
+                </table>
+            </div>
+
             <!--                총금액-->
             <div id="pricesum">
                 <span>총 금액 :</span>
