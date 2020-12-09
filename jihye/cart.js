@@ -1,7 +1,4 @@
-//전체 초기화
-$(document).on('click', '#text4', function () {
-    location.replace('card.html'); //새로고침 할 파일명
-});
+
 //플러스 버튼
 /*$(document).on('click', '.plus', function () {
     //QTY와 Price를 +해줘야 함!!
