@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="default.css">
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="detail.js"></script>
     <script>
         $(window).load(function() {
             window.resizeTo(765, 1000);
@@ -39,7 +40,7 @@
             </table>
             <table id="dt_table2">
                 <tr>
-                    <td><img src="../images/icon/hot.png"></td>
+                    <td> <label for="HOT"><img src="../images/icon/hot.png"></label></td>
                     <td><img src="../images/icon/ice.png"></td>
                 </tr>
                 <tr>
@@ -49,7 +50,7 @@
             </table>
         </div>
     </div>
-    <form id="dt_form" return=>
+    <form id="dt_form" onsubmit="return dt_finish()">
         <div class="detail_bottom">
             <hr style="margin-top: 40px;">
             <h3>사이즈</h3>
@@ -75,7 +76,7 @@
 
         <div class="dt_last">
             <input type="submit" value="장바구니에 담기" class="dt_btn">
-            <input type="button" value="취소" class="dt_btn">
+            <input type="button" value="취소" class="dt_btn" id="dt_refresh">
         </div>
     </form>
 
