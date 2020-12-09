@@ -1,0 +1,30 @@
+[
+    {
+        "id": "barbequeCiabatta",
+        "name": "바비큐 치킨 치아바타",
+        "nameEng": "Barbeque Chicken Ciabatta",
+        "img": "../images/sandwich/BarbequeChickenCiabatta.png",
+        "price": 5800
+    },
+    {
+        "id": "cranberryChicken",
+        "name": "크랜베리 치킨 샌드위치",
+        "nameEng": "Cranberry Chicken Sandwich",
+        "img": "../images/sandwich/CranberryChickenSandwich.png",
+        "price": 4500
+    },
+    {
+        "id": "hamRucola",
+        "name": "햄 루꼴라 샌드위치",
+        "nameEng": "Ham Rucola Sandwich",
+        "img": "../images/sandwich/HamRucolaSandwich.png",
+        "price": 6200
+    },
+    {
+        "id": "baconPanini",
+        "name": "베이컨 체다치즈 파니니",
+        "nameEng": "Bacon Cheddar Cheese Panini",
+        "img": "../images/sandwich/OnionBaconPanini.png",
+        "price": 6300 
+    }
+]
