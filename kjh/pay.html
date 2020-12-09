@@ -20,7 +20,7 @@
             <!--            주문목록 첫번째 라인-->
             <div id="order">
                 <h1>주문목록</h1>
-                <img src="../images/icon/backIcon_white.png" id="backbutton">
+                <img src="../images/icon/backIcon_white.png" id="backbutton" onClick="history.go(-1)">
             </div>
             <table id="orderlist">
                 <tr id="listone">
@@ -29,6 +29,7 @@
                     <th>금액</th>
                 </tr>
                 <!--                    주문 메뉴 목록-->
+                <input type="hidden" name="index" id="index">
                 <tr>
                     <th id="orderlistrowone">
                         <img src="../images/coffee/espresso_onlyhot.jpg" id="ordermenuimg">
@@ -68,11 +69,11 @@
                 <h1>결제 수단</h1>
             </div>
             <div id="paychoice">
-                <button type="button" id="cardpay">
+                <button type="button" id="cardpay" onclick="location.href='../jihye/card.html'">
                     <img src="../images/icon/cardIcon_white.png">
                     <h4>카드결제</h4>
                 </button>
-                <button type="button" id="paycopay">
+                <button type="button" id="paycopay" onclick="location.href='../jihye/card.html'">
                     <img src="../images/icon/paycoIcon.png">
                     <h4>페이코</h4>
                 </button>
