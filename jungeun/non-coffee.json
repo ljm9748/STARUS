@@ -2,36 +2,42 @@
     {
         "id": "chamomile",
         "name": "캐모마일 블렌드 티",
+        "nameEng": "Chamomile Brewed Tea",
         "img": "../images/non-coffee/Chamomile_tea.jpg",
         "price": 4100
     },
     {
         "id": "earlgrey",
         "name": "얼 그레이 티",
+        "nameEng": "Earl Grey Brewed Tea",
         "img": "../images/non-coffee/EarlGrey_Tea.jpg",
         "price": 4100
     },
     {
         "id": "grapefruit",
         "name": "자몽 허니 블랙 티",
+        "nameEng": "Grapefruit Honey Black Tea",
         "img": "../images/non-coffee/grapefruit_honey_black_tea.jpg",
         "price": 5300
     },
     {
         "id": "strawberry",
         "name": "딸기 요거트 블랜디드",
+        "nameEng": "Strawberry Yogurt Blended",
         "img": "../images/non-coffee/strawberry_yogurt_blended.jpg",
         "price": 6100 
     },
     {
         "id": "greentea",
         "name": "그린티 프라푸치노",
+        "nameEng": "Greentea Frappuccino",
         "img": "../images/non-coffee/greentee_frappuccino.jpg",
         "price": 6300 
     },
     {
         "id": "passionfruit",
         "name": "패션 푸르트 티",
+        "nameEng": "Passion Fruit Tea",
         "img": "../images/non-coffee/PassionFruit_Tea.jpg",
         "price": 6900
     }
