@@ -1,0 +1,38 @@
+[
+    {
+        "id": "espresso",
+        "name": "아메리카노",
+        "img": "../images/coffee/espresso_onlyhot.jpg",
+        "price": 3600
+    },
+    {
+        "id": "americano",
+        "name": "아메리카노",
+        "img": "../images/coffee/cafe_americano.jpg",
+        "price": 4100
+    },
+    {
+        "id": "dolceLatte",
+        "name": "돌체 라떼",
+        "img": "../images/coffee/ice_dolce_latte.jpg",
+        "price":  5600
+    },
+    {
+        "id": "vanillaLatte",
+        "name": "바닐라 라떼",
+        "img": "../images/coffee/vanilla_latte.jpg",
+        "price": 5100 
+    },
+    {
+        "id": "caramel",
+        "name": "카라멜 마키아또",
+        "img": "../images/coffee/caramel_macchiato.jpg",
+        "price": 5600 
+    },
+    {
+        "id": "cafeMocha",
+        "name": "카페 모카",
+        "img": "../images/coffee/ice_cafe_mocha.jpg",
+        "price": 5100
+    }
+]
