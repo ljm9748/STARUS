@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html lang="ko">
-
+<html lang="">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>제이쿼리를 이용한 네비게이션바</title>
-
-    <link rel="stylesheet" href="navi.css">
-   
+    <title>병합테스트</title>
+    
+    <link rel="stylesheet" href="../hyo0/navi.css">
+    
     <!--Noto Sans KR 폰트-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap" rel="stylesheet">
@@ -23,15 +22,9 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
-    <style>
-       
-        
-    </style>
-
-    <script>
+     <script>
         $(document).ready(function() {
 
-            /*각 세부 메뉴들에대해 터치가되면 색이 반전된다*/
             $('#nav_coffee').on({
                 mouseenter: function() {
                     $('#nav_coffee').addClass('over3');
@@ -96,10 +89,6 @@
                 }
             });
 
-            /*음료나 푸드를 클릭(터치)하면 세부메뉴가 보여진다
-            그리고 아래 하이라이트 언더라인이 생기고 다른메뉴를
-            클릭할시 언더라인이 사라진다*/
-
             $('#nav_category_bev').click(function() {
                 $('#nav_detail_bev').show();
                 $('#nav_detail_food').hide();
@@ -128,12 +117,11 @@
 
         });
     </script>
-
-
+    
 </head>
 
 <body>
-    <table>
+   <table>
         <tr>
             <td colspan="4" id="nav_main">STARUS</td>
         </tr>
@@ -149,14 +137,8 @@
             <td id="nav_sandwitch">SANDWITCH</td>
             <td id="nav_cake">CAKE</td>
         </tr>
-        <tr id="nav_detail">
-            <td id="nav_coffee"><a href="../jungeun/menuManager.html">COFFEE</a></td>
-            <td id="nav_noncoffee"><a href="">NON-COFFEE</a></td>
-            <td id="nav_sandwitch"><a href="">SANDWITCH</a></td>
-            <td id="nav_cake"><a href="">CAKE</a></td>
-        </tr>
+        
     </table>
-
-
-
-</body></html>
+    
+</body>
+</html>
