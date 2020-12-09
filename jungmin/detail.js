@@ -1,7 +1,13 @@
 $(document).ready(function() {
     $('#dt_refresh').click(function() {
         alert('replace');
+        location.replace('detail.html');
     });
+
+    $('#dt_finish').click(function() {
+        dt_finish();
+
+    })
 
 });
 $("#dt_done").click(function() {
@@ -23,11 +29,17 @@ function dt_page(menuid) {
 //장바구니에 담기 버튼 누르면
 function dt_finish() {
 
-
     var hotice = $(":input:radio[name=hotice]:checked").val();
-    alert(hotice);
     var size = $(":input:radio[name=size]:checked").val();
-    alert(size);
+
+    if (hotice == null) {
+        alert("HOT/ICE를 선택해 주세요");
+        return false;
+    }
+    if (size == null) {
+        alert("size를 선택해 주세요");
+        return true;
+    }
 
     if (size == "Tall") var money = 0;
     else if (size == "Grande") var money = 500;
@@ -35,4 +47,7 @@ function dt_finish() {
 
     var string = hotice + "/" + size + "+" + money + "원을 선택하셨습니다.";
     alert(string);
+
+    $(document).location.replace('../jungeun/menuManager.html');
+
 }
