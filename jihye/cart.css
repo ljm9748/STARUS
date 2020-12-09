@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+#cartlayout{
+    height: 750px;
+    width: 200px;
+     background-color: #F2F2F2;
+}
+/*첫부분*/
+#carticon> img {
+    width:40px;
+    height:40px;
+    object-fit: contain;
+}
+#carticon {
+    position: absolute;
+    top: 20px;
+    left: 38px;
+    
+}
+
+#text1 {
+    position: absolute;
+    top:24px;
+    left:82px;
+    color: #025940;
+    font-size: 23px;
+    font-weight: 900;
+}
+/*중간부분*/
+#menu {
+    position:absolute;
+    width: 200px;
+    height: 520px;
+    top:90px;
+    background-color:#fafafa;
+    border-radius: 10px 10px 0px 0px;
+}
+#table {
+    width: 190px;
+}
+#table input {
+    width: 20px;
+}
+.td2 {
+     text-align: right;
+}
+.td4 {
+     text-align: right;
+}
+.td1 {
+    text-align: center;
+    color: #002D47;
+    font-weight: bold;
+}
+.td3 {
+    text-align: center;
+    color: #002D47;
+    font-weight: bold;
+}
+
+/*끝부분*/
+#foot {
+    position: absolute;
+    top:610px;
+}
+#hrline {
+width: 200px;    
+}
+
+#text2 {
+position: absolute;
+width:150px;
+font-size: 25px;
+font-weight: bolder;
+left:10px;
+top:5px;
+color: #282828;
+\  
+}
+
+#text3 {
+position: absolute;
+top:50px;
+right: 10px;
+font-size: 23px;
+color: #025940;
+font-weight: bolder;
+}
+
+#text4 {
+    position: absolute;
+
+    width: 160px;
+    height: 30px;
+    background-color: #666666;
+    border-radius: 7px;
+    top:94px;
+    left:20px;
+    text-align: center;
+    line-height:30px;
+    color: white;
+}

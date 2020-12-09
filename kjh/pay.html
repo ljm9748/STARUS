@@ -1,32 +1,92 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="ko">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>STARUS - PAYMENT</title>
+    <link rel="stylesheet" href="pay.css">
 
-    <link rel="stylesheet" href="default.css">
+<!--
+    jQuery 라이브러리 로드
+    <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
+-->
+
 </head>
 
 <body>
     <div id="paymentpage">
-<!--        오더헤더 시작-->
+        <!--        오더헤더 시작-->
         <header id="payheader">
             <h1>ORDER</h1>
         </header>
-<!--        오더헤더 끝-->
+        <!--        오더헤더 끝-->
 
-<!--        주문목록 시작-->
+        <!--        주문목록 시작-->
         <div>
-<!--            주문목록 첫번째 라인-->
-            <div>
+            <!--            주문목록 첫번째 라인-->
+            <div id="order">
                 <h1>주문목록</h1>
-                <img src="../images/%25EC%2595%2584%25EC%259D%25B4%25EC%25BD%2598/backIcon_white.png">
+                <img src="../images/icon/backIcon_white.png" id="backbutton" onClick="history.go(-1)" style="cursor:pointer">
+            </div>
+            <table id="orderlist">
+                <tr id="listone">
+                    <th id="orderlistrowone">메뉴</th>
+                    <th id="orderlistrowtwo">수량</th>
+                    <th>금액</th>
+                </tr>
+                <!--                    주문 메뉴 목록-->
+                <input type="hidden" name="index" id="index">
+                <tr>
+                    <th id="orderlistrowone">
+                        <img src="../images/coffee/espresso_onlyhot.jpg" id="ordermenuimg">
+                        <span>에스프레소 ICE / GRANDE</span>
+                    </th>
+                    <th>1</th>
+                    <th>4,100원</th>
+                </tr>
+                <tr>
+                    <th id="orderlistrowone">
+                        <img src="../images/cake/RealStrawberryTiramisu.png" id="ordermenuimg">
+                        <span>스트로베리 티라미수</span>
+                    </th>
+                    <th>1</th>
+                    <th>7,500원</th>
+                </tr>
+                <tr>
+                    <th id="orderlistrowone">
+                        <img src="../images/non-coffee/grapefruit_honey_black_tea.jpg" id="ordermenuimg">
+                        <span>자몽 허니 블랙 티 HOT / GRANDE</span>
+                    </th>
+                    <th>1</th>
+                    <th>5,300원</th>
+                </tr>
+            </table>
+            <!--                총금액-->
+            <div id="pricesum">
+                <span>총 금액 :</span>
+                <span>16,900 원</span>
             </div>
         </div>
-<!--        주문목록 끝-->
+        <!--        주문목록 끝-->
+
+        <!--        결제수단 시작-->
+        <div id="cardchoice">
+            <div>
+                <h1>결제 수단</h1>
+            </div>
+            <div id="paychoice">
+                <button type="button" id="cardpay" onclick="location.href='../jihye/card.html'" style="cursor:pointer">
+                    <img src="../images/icon/cardIcon_white.png">
+                    <h4>카드결제</h4>
+                </button>
+                <button type="button" id="paycopay" onclick="location.href='../jihye/card.html'" style="cursor:pointer">
+                    <img src="../images/icon/paycoIcon.png">
+                    <h4>페이코</h4>
+                </button>
+            </div>
+        </div>
+        <!--        결제수단 끝-->
 
     </div>
 
-</body>
-</html>
+</body></html>
