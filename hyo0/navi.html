@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>제이쿼리를 이용한 네비게이션바</title>
 
+    <link rel="stylesheet" href="navi.css">
+   
     <!--Noto Sans KR 폰트-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap" rel="stylesheet">
@@ -48,8 +50,8 @@
             border-bottom: 1px solid #999;
             height: 50px;
         }
-        
-        #nav_category_bev.underline1 {
+
+        #nav_category_bev.underline_a {
             border-bottom: 3px solid black;
             font-size: 25px;
         }
@@ -58,8 +60,8 @@
             border-bottom: 1px solid #999;
             height: 50px;
         }
-        
-        #nav_category_food.underline2 {
+
+        #nav_category_food.underline_b {
             border-bottom: 3px solid black;
             font-size: 25px;
         }
@@ -67,95 +69,165 @@
         #nav_coffee {
             height: 50px;
         }
-        
+
         /*마우스오버연초록*/
         td.over1 {
             background-color: #027353;
-            color: white;      
+            color: white;
         }
+
         /*마우스오버찐초록*/
         td.over2 {
             background-color: #025940;
-            color: white;      
+            color: white;
         }
+
         /*마우스오버갈색*/
         td.over3 {
             background-color: #73534C;
-            color: white;      
+            color: white;
         }
+
         /*마우스오버팥색*/
         td.over4 {
             background-color: #BF988F;
-            color: white;      
+            color: white;
         }
 
-        #nav_detail {
+        #nav_detail_bev {
+            height: 50px;
             display: none;
         }
+
+        #nav_detail_food {
+            height: 50px;
+            display: none;
+        }
+
+        #nav_coffee.underline1 {
+            border-bottom: 3px solid black;
+            font-size: 25px;
+        }
+
+        #nav_noncoffee.underline2 {
+            border-bottom: 3px solid black;
+            font-size: 25px;
+        }
+        
+        #nav_sandwitch.underline3{
+            border-bottom: 3px solid black;
+            font-size: 25px;
+        }
+        
+        #nav_cake.underline4{
+            border-bottom: 3px solid black;
+            font-size: 25px;
+        }
+        
     </style>
 
     <script>
         $(document).ready(function() {
-            
+
             /*각 세부 메뉴들에대해 터치가되면 색이 반전된다*/
             $('#nav_coffee').on({
                 mouseenter: function() {
-                    $('#nav_coffee').addClass('over1');
+                    $('#nav_coffee').addClass('over3');
                 },
                 mouseleave: function() {
-                    $('#nav_coffee').removeClass('over1');
+                    $('#nav_coffee').removeClass('over3');
+                },
+                click: function() {
+                    $('#nav_coffee').addClass('underline1');
+                    
+                    $('#nav_noncoffee').removeClass('underline2');
+                    $('#nav_sandwitch').removeClass('underline3');
+                    $('#nav_cake').removeClass('underline4');
                 }
             });
-            
+
             $('#nav_noncoffee').on({
                 mouseenter: function() {
-                    $('#nav_noncoffee').addClass('over3');
+                    $('#nav_noncoffee').addClass('over1');
                 },
                 mouseleave: function() {
-                    $('#nav_noncoffee').removeClass('over3');
+                    $('#nav_noncoffee').removeClass('over1');
+                },
+                click: function() {
+                    $('#nav_noncoffee').addClass('underline2');
+                    
+                    $('#nav_coffee').removeClass('underline1');
+                    $('#nav_sandwitch').removeClass('underline3');
+                    $('#nav_cake').removeClass('underline4');
                 }
             });
-            
+
             $('#nav_sandwitch').on({
                 mouseenter: function() {
                     $('#nav_sandwitch').addClass('over2');
                 },
                 mouseleave: function() {
                     $('#nav_sandwitch').removeClass('over2');
+                },
+                click: function() {
+                    $('#nav_sandwitch').addClass('underline3');
+                    
+                    $('#nav_coffee').removeClass('underline1');
+                    $('#nav_noncoffee').removeClass('underline2');
+                    $('#nav_cake').removeClass('underline4');
                 }
             });
-            
+
             $('#nav_cake').on({
                 mouseenter: function() {
                     $('#nav_cake').addClass('over4');
                 },
                 mouseleave: function() {
                     $('#nav_cake').removeClass('over4');
+                },
+                click: function() {
+                    $('#nav_cake').addClass('underline4');
+                    
+                    $('#nav_coffee').removeClass('underline1');
+                    $('#nav_noncoffee').removeClass('underline2');
+                    $('#nav_sandwitch').removeClass('underline3');
                 }
             });
 
             /*음료나 푸드를 클릭(터치)하면 세부메뉴가 보여진다
             그리고 아래 하이라이트 언더라인이 생기고 다른메뉴를
             클릭할시 언더라인이 사라진다*/
-            
+
             $('#nav_category_bev').click(function() {
-                $('#nav_detail').show();
-                $('#nav_category_bev').addClass('underline1');
-                $('#nav_category_food').removeClass('underline2');
-               
-            });
-            
-            $('#nav_category_food').click(function() {
-                $('#nav_detail').show();
-                $('#nav_category_food').addClass('underline2');
-                $('#nav_category_bev').removeClass('underline1');
+                $('#nav_detail_bev').show();
+                $('#nav_detail_food').hide();
+                $('#nav_category_bev').addClass('underline_a');
+                $('#nav_category_food').removeClass('underline_b');
+                
+                $('#nav_coffee').removeClass('underline1');
+                $('#nav_noncoffee').removeClass('underline2');
+                $('#nav_sandwitch').removeClass('underline3');
+                $('#nav_cake').removeClass('underline4');
             });
 
-        
+            $('#nav_category_food').click(function() {
+                $('#nav_detail_food').show();
+                $('#nav_detail_bev').hide();
+                $('#nav_category_food').addClass('underline_b');
+                $('#nav_category_bev').removeClass('underline_a');
+                
+                $('#nav_coffee').removeClass('underline1');
+                $('#nav_noncoffee').removeClass('underline2');
+                $('#nav_sandwitch').removeClass('underline3');
+                $('#nav_cake').removeClass('underline4');
+            });
+
+            
+
         });
     </script>
 
-    
+
 </head>
 
 <body>
@@ -164,14 +236,21 @@
             <td colspan="4" id="nav_main">STARUS</td>
         </tr>
         <tr id="nav_sub">
-            <td colspan="2" id="nav_category_bev">음료</td>
-            <td colspan="2" id="nav_category_food">푸드</td>
+            <td colspan="" id="nav_category_bev">음료(Beverage)</td>
+            <td colspan="" id="nav_category_food">푸드(Food)</td>
         </tr>
-        <tr id="nav_detail">
+        <tr id="nav_detail_bev">
             <td id="nav_coffee">COFFEE</td>
             <td id="nav_noncoffee">NON-COFFEE</td>
+        </tr>
+        <tr id="nav_detail_food">
             <td id="nav_sandwitch">SANDWITCH</td>
             <td id="nav_cake">CAKE</td>
+        <tr id="nav_detail">
+            <td id="nav_coffee"><a href="../jungeun/menuManager.html">COFFEE</a></td>
+            <td id="nav_noncoffee"><a href="">NON-COFFEE</a></td>
+            <td id="nav_sandwitch"><a href="">SANDWITCH</a></td>
+            <td id="nav_cake"><a href="">CAKE</a></td>
         </tr>
     </table>
 
