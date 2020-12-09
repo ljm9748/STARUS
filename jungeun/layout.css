@@ -50,17 +50,10 @@ div.coffee {
     border: 1px solid #aaa;
     background-color: antiquewhite;
     float: left;
-    display: inline-block;
+    /*display: inline-block;*/
     /*display: none;*/
 }
 
-
-.coffee>table tr, .coffee>table td, .non-coffee>table tr, .non-coffee>table td, .sandwich>table tr, .sandwich>table td, .cake>table tr, .cake>table td {
-    padding: px;
-    /* 확인용 */
-    /*border: 1px solid #aaa;*/
-    text-align: center;
-}
 
  .coffee a, .non-coffee a, .sandwich a, .cake a {
     padding: 60px 50px;
@@ -150,7 +143,7 @@ div.coffee {
     padding: 15px 70px;
     border-top: 3px solid #ddd;
     /* 확인용 */
-    background-color: aqua;
+    background-color: ;
 }
 
 .footer button {
