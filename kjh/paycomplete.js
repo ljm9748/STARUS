@@ -1,21 +1,27 @@
 window.onload = function () {
 
+    var odnum = '';
+
     if (localStorage.getItem('odnum') == null) {
         localStorage.setItem('odnum', '1');
     } else {
 
-        var odnum = JSON.parse(localStorage.getItem('odnum'));
+        odnum = JSON.parse(localStorage.getItem('odnum'));
 
         console.log('odnum =>', odnum);
         console.log(typeof(odnum));
 
     }
 
+    console.log('확인', odnum);
+    console.log('확인', typeof(odnum));
+
+    odnum += 1;
+
     // 주문번호 출력
     function showOrdernum() {
 
         //번호
-        odnum += 1;
         localStorage.setItem('odnum',odnum);
 
         console.log(odnum);
