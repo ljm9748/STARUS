@@ -24,51 +24,38 @@
 
     <!--menu.css를 로드-->
     <link rel="stylesheet" href="menu.css">
-
-
-    <!--menu.js를 로드
-    <script src="menu.js"></script>-->
+    
+    <!--menu.js를 로드 -->
+    <script src="menu.js"></script>
+    
     <script src="../jungmin/start.js"></script>
 
+      
 </head>
 
 <body>
+    
+    <!-- NAVI 바 ------------------------------->
+    <table class="nav">
+        <tr>
+            <td colspan="4" id="nav_main">STARUS</td>
+        </tr>
+        <tr id="nav_sub">
+            <td colspan="" id="nav_category_bev">음료(Beverage)</td>
+            <td colspan="" id="nav_category_food">푸드(Food)</td>
+        </tr>
+        <tr id="nav_detail_bev">
+            <td id="nav_coffee">COFFEE</td>
+            <td id="nav_noncoffee">NON-COFFEE</td>
+        </tr>
+        <tr id="nav_detail_food">
+            <td id="nav_sandwitch">SANDWITCH</td>
+            <td id="nav_cake">CAKE</td>
+        </tr>
 
-    <!-- NAV바 (임시용) ------------------------------->
-    <header>
-        <h2>STARUS</h2>
-    </header>
+    </table>
 
-    <nav>
-        <table>
-            <tr>
-                <td colspan="2">
-                    <h4>음료</h4>
-                </td>
-                <td colspan="2">
-                    <h4>푸드</h4>
-                </td>
-
-            </tr>
-            <tr>
-                <td>
-                    <h5>COFFEE</h5>
-                </td>
-                <td>
-                    <h5>NON-COFFEE</h5>
-                </td>
-                <td>
-                    <h5>SANDWICH</h5>
-                </td>
-                <td>
-                    <h5>CAKE</h5>
-                </td>
-            </tr>
-
-        </table>
-    </nav>
-
-
+    
     <!-- 메뉴 -------------------->
     <div class="menu">
 
@@ -110,7 +97,7 @@
         </div>
 
         <!-- 2. 논커피 -->
-        <div class="non-coffee">
+        <div class="noncoffee">
             <table>
                 <tr>
                     <td>
