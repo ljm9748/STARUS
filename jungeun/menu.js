@@ -17,7 +17,7 @@ $(window).ready(function() {
 
         console.log(coffee);
     }
-    console.log(cake[0].id);
+
 })
 
 
@@ -45,19 +45,19 @@ function parceJson() {
 
 
 // NAVI 바
-     
+
 $(document).ready(function() {
 
     $('#nav_detail_bev').show();
-    
+
     $('.coffee').css('display', 'inline-block');
     $('.noncoffee').css('display', 'none');
     $('.sandwitch').css('display', 'none');
     $('.cake').css('display', 'none');
-    
+
     /*각 세부 메뉴들에대해 터치가되면 색이 반전된다*/
     $('#nav_coffee').on({
-        
+
         mouseenter: function() {
             $('#nav_coffee').addClass('over3');
         },
@@ -70,17 +70,17 @@ $(document).ready(function() {
             $('#nav_noncoffee').removeClass('underline2');
             $('#nav_sandwitch').removeClass('underline3');
             $('#nav_cake').removeClass('underline4');
-            
+
             $('.coffee').css('display', 'inline-block');
             $('.noncoffee').css('display', 'none');
             $('.sandwitch').css('display', 'none');
             $('.cake').css('display', 'none');
-    
+
         }
     });
-    
 
-    
+
+
     $('#nav_noncoffee').on({
         mouseenter: function() {
             $('#nav_noncoffee').addClass('over1');
@@ -94,9 +94,9 @@ $(document).ready(function() {
             $('#nav_coffee').removeClass('underline1');
             $('#nav_sandwitch').removeClass('underline3');
             $('#nav_cake').removeClass('underline4');
-            
+
             /*$('.coffee').removeAttr('display');*/
-            
+
             $('.coffee').hide();
             $('.noncoffee').show();
             $('.sandwich').hide();
@@ -118,7 +118,7 @@ $(document).ready(function() {
             $('#nav_coffee').removeClass('underline1');
             $('#nav_noncoffee').removeClass('underline2');
             $('#nav_cake').removeClass('underline4');
-            
+
             $('.coffee').hide();
             $('.noncoffee').hide();
             $('.sandwich').show();
@@ -138,7 +138,7 @@ $(document).ready(function() {
             $('#nav_coffee').removeClass('underline1');
             $('#nav_noncoffee').removeClass('underline2');
             $('#nav_sandwitch').removeClass('underline3');
-            
+
             $('.coffee').hide();
             $('.noncoffee').hide();
             $('.sandwich').hide();
@@ -173,14 +173,30 @@ $(document).ready(function() {
         $('#nav_cake').removeClass('underline4');
     });
 
-    
+
     // 메뉴 ---------------------------------------
 
 
     // 메뉴이미지 클릭 이벤트
     $('img').on("click", function() {
-            alert("Id: " + this.id);
-        });
+
+        let tmpnum = Number(this.id);
+        let nowitem;
+        if (tmpnum < 10) {
+            nowitem = coffee[tmpnum];
+        } else if (tmpnum < 20) {
+            tmpnum = tmpnum - 10;
+            nowitem = noncoffee[tmpnum];
+        } else if (tmpnum < 30) {
+            tmpnum = tmpnum - 20;
+            nowitem = sandwich[tmpnum];
+        } else {
+            tmpnum = tmpnum - 30;
+            nowitem = cake[tmpnum];
+        }
+        localStorage.setItem('nowitem', JSON.stringify(nowitem));
+        location.replace('../jungmin/detail.html');
+    });
 
 
     // 홈 버튼 이벤트 : 클릭 시 매장/포장 선택 가능한 mainpage 로드
@@ -193,8 +209,5 @@ $(document).ready(function() {
         location.replace('');
     });
 
-    
+
 });
-
-
-
