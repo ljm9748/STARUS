@@ -1,5 +1,5 @@
 let nowitem;
-nowitem = JSON.parse(localStorage.getItem('cake'))[3];
+nowitem = JSON.parse(localStorage.getItem('noncoffee'))[3];
 console.log(nowitem);
 dt_page();
 $(document).ready(function() {
@@ -58,9 +58,10 @@ function dt_finish() {
         nowitem.hotice = hotice;
         nowitem.size = size;
     }
+    nowitem.count = 1;
     console.log(nowitem);
     setmylist();
-    $(document).location.replace('../jungeun/menuManager.html');
+    location.replace('../jungeun/menuManager.html');
 
 }
 //장바구니 로컬 데이터에 넣기
@@ -75,4 +76,5 @@ function setmylist() {
         totalList.push(nowitem);
         localStorage.setItem('buyList', JSON.stringify(totalList));
     }
+    return false;
 }

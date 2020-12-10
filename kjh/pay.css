@@ -95,10 +95,15 @@
     margin-right: 15px;
 }
 
+.otft>span {
+    margin-right: 10px;
+}
+
 .ottd {
     text-align: center;
     width: 65px;
 }
+
 
 /*
 .ordertbody>tr>td:first-child {
