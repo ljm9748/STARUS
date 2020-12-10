@@ -1,5 +1,5 @@
 let nowitem;
-nowitem = JSON.parse(localStorage.getItem('coffee'))[3];
+nowitem = JSON.parse(localStorage.getItem('noncoffee'))[3];
 console.log(nowitem);
 dt_page();
 $(document).ready(function() {
@@ -58,6 +58,7 @@ function dt_finish() {
         nowitem.hotice = hotice;
         nowitem.size = size;
     }
+    nowitem.count = 1;
     console.log(nowitem);
     setmylist();
     location.replace('../jungeun/menuManager.html');
