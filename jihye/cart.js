@@ -18,9 +18,9 @@ for (var i = 0; i < buylist.length; i++) {
     tbody += ' <tr>';
     tbody += ' <td>' + buylist[i].hotice +'/'+buylist[i].size+'</td>';
     tbody += '<td>';
-    tbody += '<img class="plus" src="../images/icon/plus.png" width=15px id="'+1000+i+'">';
+    tbody += '<img class="plus" src="../images/icon/plus.png" width=15px id="'+i+'">';
     tbody += '<div class="num1" >'+buylist[i].count+'</div>';
-    tbody += '<img class="minus" src="../images/icon/minus.png" width=15px id="'+i+'">';
+    tbody += '<img class="minus" src="../images/icon/minus.png" width=15px id="'+1000+i+'">';
     tbody += '</td>';
     tbody += '</tr>';
 
