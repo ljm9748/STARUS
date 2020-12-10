@@ -52,7 +52,7 @@ div.coffee {
     /* 확인용 */
     /*border: 1px solid #aaa;*/
     float: left;
-    display: none;
+    display: inline-block;
 }
 
 div.non-coffee {
@@ -82,7 +82,7 @@ div.cake {
     /* 확인용 */
     /*border: 1px solid #aaa;*/
     float: left;
-    /*display: none;*/
+    display: none;
 }
 
  .coffee a, .non-coffee a, .sandwich a, .cake a {
