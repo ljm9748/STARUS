@@ -25,6 +25,12 @@ $(document).ready(function() {
             $('#nav_noncoffee').removeClass('underline2');
             $('#nav_sandwitch').removeClass('underline3');
             $('#nav_cake').removeClass('underline4');
+            
+            $('.coffee').css('display', 'inline-block');
+            $('.noncoffee').css('display', 'none');
+            $('.sandwitch').css('display', 'none');
+            $('.cake').css('display', 'none');
+    
         }
     });
     
@@ -130,9 +136,18 @@ $(document).ready(function() {
 // 메뉴 ---------------------------------------
 
 // 메뉴이미지 선택 이벤트 : 클릭 시 옵션페이지 로드 
-/*$(document).on('click', function() {
-    location.replace('../jungmin/detail.html');
-});*/
+$('.coffee img').on('click', function() {
+    
+    let selected = localStorage.getItem('coffee');
+    let id = selected[0]; 
+    console.log(id);
+    
+    alert('localStorage.key(i)');
+    
+    
+    /*$('.coffee a')addAttr('src', '../jungmin/detail.html');*/
+    /*location.replace('../jungmin/detail.html');*/
+});
 
 
 
