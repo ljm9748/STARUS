@@ -173,132 +173,28 @@ $(document).ready(function() {
         $('#nav_cake').removeClass('underline4');
     });
 
-    setCoffeeTable();
+    
+    // 메뉴 ---------------------------------------
 
+
+    // 메뉴이미지 클릭 이벤트
+    $('img').on("click", function() {
+            alert("Id: " + this.id);
+        });
+
+
+    // 홈 버튼 이벤트 : 클릭 시 매장/포장 선택 가능한 mainpage 로드
+    $('#home').on('click', function() {
+        location.replace('../uri/mainpage.html');
+    });
+
+    // 주문 버튼 이벤트 : 클릭 시 결제 가능한 pay 페이지 로드
+    $('#order').on('click', function() {
+        location.replace('');
+    });
+
+    
 });
 
 
-// 메뉴 ---------------------------------------
-
-// 메뉴 테이블 설정
-function setCoffeeTable() {
-    
-    alert('11');
-    var listtable = document.querySelector('#listtable');
-
-    var tbody = null;
-    
-    /*var tbody = '<tr>';
-    tbody += '<th><a href="../jungmin/detail.html">이미지</a></th>';
-    tbody += '<th><br></th>';
-    tbody += '<th>이름</th>';
-    tbody += '</tr>';*/
-         
-    for(var i=0; i<coffee.length; i++){
-        tbody += '<tr>';
-        tbody += '<td><a href="../jungmin/detail.html"><img src=';
-        tbody += coffee[i].img;
-        tbody += '></a><br><h5>';
-        tbody += coffee[i].name;
-        tbody += '</h5>';
-        tbody += '</td>';
-        tbody += '</tr>';
-    }
-    
-    listtable.innerHTML = tbody;
-    console.log("tbody"+tbody);
-    console.log(coffee[1].img);
-}
-
-
-function setNonCoffeeTable() {
-    
-    var listtable = document.querySelector('#listtable');
-
-    var tbody = '<tr>';
-    tbody += '<th>순번(index)<th>';
-    tbody += '<th><a href="../jungmin/detail.html">이미지</a></th>';
-    tbody += '<th><br></th>';
-    tbody += '<th>이름</th>';
-    tbody += '</tr>';
-         
-    for(var i=0; i<noncoffee.length; i++){
-        tbody = '<tr>';
-        tbody += '<td>'+i+'</td>';
-        tbody += '<td><a href="../jungmin/detail.html">'+noncoffee[i].img+'</a></td>';
-        tbody += '<td><br></td>';
-        tbody += '<td>'+noncoffee[i].name+'</td>';
-        tbody += '</tr>';
-    }
-    
-    listtable.innerHTML = tbody;
-}
-
-
-function setSandwichTable() {
-    
-    var listtable = document.querySelector('#listtable');
-
-    var tbody = '<tr>';
-    tbody += '<th>순번(index)<th>';
-    tbody += '<th><a href="../jungmin/detail.html">이미지</a></th>';
-    tbody += '<th><br></th>';
-    tbody += '<th>이름</th>';
-    tbody += '</tr>';
-         
-    for(var i=0; i<sandwich.length; i++){
-        tbody = '<tr>';
-        tbody += '<td>'+i+'</td>';
-        tbody += '<td><a href="../jungmin/detail.html">'+sandwich[i].img+'</a></td>';
-        tbody += '<td><br></td>';
-        tbody += '<td>'+sandwich[i].name+'</td>';
-        tbody += '</tr>';
-    }
-    
-    listtable.innerHTML = tbody;
-}
-
-function setCakeTable() {
-    
-    var listtable = document.querySelector('#listtable');
-
-    var tbody = '<tr>';
-    tbody += '<th>순번(index)<th>';
-    tbody += '<th><a href="../jungmin/detail.html">이미지</a></th>';
-    tbody += '<th><br></th>';
-    tbody += '<th>이름</th>';
-    tbody += '</tr>';
-         
-    for(var i=0; i<cake.length; i++){
-        tbody = '<tr>';
-        tbody += '<td>'+i+'</td>';
-        tbody += '<td><a href="../jungmin/detail.html">'+cake[i].img+'</a></td>';
-        tbody += '<td><br></td>';
-        tbody += '<td>'+cake[i].name+'</td>';
-        tbody += '</tr>';
-    }
-    
-    listtable.innerHTML = tbody;
-}
-
-
-
-
-
-
-// 메뉴이미지 클릭 이벤트
-$('img').on("click", function() {
-        alert("Id: " + this.id);
-    });
-
-
-// 홈 버튼 이벤트 : 클릭 시 매장/포장 선택 가능한 mainpage 로드
-/*$(document).on('click', function() {
-    location.replace('../uri/mainpage.html');
-});*/
-
-// 주문 버튼 이벤트 : 클릭 시 결제 가능한 pay 페이지 로드
-/*$(document).on('click', function() {
-    location.replace('');
-});*/
 
