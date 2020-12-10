@@ -1,3 +1,4 @@
+ $(document).ready(function() {
 //로컬에서 배열을 가지고 옴
 var buylist = JSON.parse(localStorage.getItem('buyList'));
 console.log(buylist);
@@ -75,8 +76,10 @@ for(var i = 0; i < buylist.length; i++) {
 text3.innerHTML=sum+'원';
 
 
-//주문하기 버튼 왜 안돼
+//주문하기 버튼
 $('#order').click(function(){
     location.replace('../kjh/pay.html');   
    localStorage.setItem('buyList', JSON.stringify(buylist));
+});
+     
 });
