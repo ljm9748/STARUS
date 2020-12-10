@@ -49,7 +49,7 @@
 /*    @확인용*/
 /*    border: 1px solid skyblue;*/
 
-    margin: 40px 80px 30px 80px;
+    margin: 40px 80px 10px 80px;
     font-size: 20px;
     font-weight: 700;
     color: #025940;
@@ -74,15 +74,27 @@
 /*    @확인용*/
     border: 1px solid skyblue;
 
-    margin: 0px 80px 20px 80px;
+    margin: 20px 80px 20px 80px;
 }
 
 .ordertbody>tr>td:first-child {
+/*    @확인용*/
+    border: 1px solid pink;
     width: 451px;
 }
 
 .ordertbody>tr>td:not(:first-child) {
     width: 77px;
+}
+
+.ordertbody>tr>td:first-child>img {
+    border-radius: 15px;
+    margin-right: 20px;
+    vertical-align: middle;
+}
+
+.menuname {
+    margin-right: 15px;
 }
 
 
