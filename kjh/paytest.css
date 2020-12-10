@@ -70,6 +70,10 @@
     height: 300px;
 }
 
+.orderlist::-webkit-scrollbar {
+    display: none;
+}
+
 .ordertbody {
 /*    @확인용*/
     border: 1px solid skyblue;
