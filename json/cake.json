@@ -1,37 +1,41 @@
-[
-    {
+[{
         "id": "strawberryTiramisu",
         "name": "리얼 스트로베리 티라미수",
         "nameEng": "Real Strawberry Tiramisu",
         "img": "../images/cake/RealStrawberryTiramisu.png",
-        "price": 7500
+        "price": 7500,
+        "isdrink": false
     },
     {
         "id": "blueberryCookie",
         "name": "블루베리 쿠키 케이크",
         "nameEng": "Blueberry Cookie Cake",
         "img": "../images/cake/BlueberryCheeseCake.png",
-        "price": 6900
+        "price": 6900,
+        "isdrink": false
     },
     {
         "id": "cloudCheese",
         "name": "클라우드 치즈 케이크",
         "nameEng": "Cloud Cheese Cake",
         "img": "../images/cake/CloudCheeseCake.png",
-        "price": 5500
+        "price": 5500,
+        "isdrink": false
     },
     {
         "id": "earygreyCake",
         "name": "얼그레이 생크림 케이크",
         "nameEng": "Earl Grey Cream Cake",
         "img": "../images/cake/EarlGreyCreamCake.png",
-        "price": 6900 
+        "price": 6900,
+        "isdrink": false
     },
     {
         "id": "creamCastella",
         "name": "크림 카스텔라",
         "nameEng": "Fresh Cream Castella",
         "img": "../images/cake/FreshCreamCastella.png",
-        "price": 4500 
+        "price": 4500,
+        "isdrink": false
     }
 ]
