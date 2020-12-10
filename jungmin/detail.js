@@ -1,5 +1,5 @@
 let nowitem;
-nowitem = JSON.parse(localStorage.getItem('coffee'))[3];
+nowitem = JSON.parse(localStorage.getItem('cake'))[3];
 console.log(nowitem);
 dt_page();
 $(document).ready(function() {
@@ -29,30 +29,35 @@ function dt_page() {
     $("#dt_menu_name_eng").text(nowitem.id);
     $("#dt_money").text(nowitem.price);
 
+    if (nowitem.isdrink) {} else {
+        $("#dt_table2").hide();
+        $(".detail_bottom").hide();
+    }
 
 }
 
 //장바구니에 담기 버튼 누르면
 function dt_finish() {
+    if (nowitem.isdrink) {
+        let hotice = $(":input:radio[name=hotice]:checked").val();
+        let size = $(":input:radio[name=size]:checked").val();
 
-    let hotice = $(":input:radio[name=hotice]:checked").val();
-    let size = $(":input:radio[name=size]:checked").val();
+        if (hotice == null) {
+            alert("HOT/ICE를 선택해 주세요");
+            return false;
+        }
+        if (size == null) {
+            alert("size를 선택해 주세요");
+            return true;
+        }
+        let money;
+        if (size == "Tall") { money = 0; } else if (size == "Grande") { money = 500; } else { money = 1000; }
 
-    if (hotice == null) {
-        alert("HOT/ICE를 선택해 주세요");
-        return false;
+        let string = hotice + "/" + size + "+" + money + "원을 선택하셨습니다.";
+        alert(string);
+        nowitem.hotice = hotice;
+        nowitem.size = size;
     }
-    if (size == null) {
-        alert("size를 선택해 주세요");
-        return true;
-    }
-    let money;
-    if (size == "Tall") { money = 0; } else if (size == "Grande") { money = 500; } else { money = 1000; }
-
-    let string = hotice + "/" + size + "+" + money + "원을 선택하셨습니다.";
-    alert(string);
-    nowitem.hotice = hotice;
-    nowitem.size = size;
     console.log(nowitem);
     setmylist();
     $(document).location.replace('../jungeun/menuManager.html');
