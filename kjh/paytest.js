@@ -49,6 +49,7 @@ function showOderlist() {
     orderlistrow.innerHTML = tbody;
 
 };
+showOderlist();
 
 // 총 금액 보여주기
 function showPricesum() {
@@ -62,6 +63,7 @@ function showPricesum() {
     pricesum.innerHTML = div;
 
 };
+showPricesum();
 
 
 
