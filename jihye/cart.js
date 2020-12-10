@@ -1,104 +1,76 @@
-var insertTr = '';
-    insertTr += '<tr>';
-    insertTr += '<td class="td1"></td>';   
-    insertTr += '<td class="td2"></td>';
-    insertTr += '</tr>';
-    insertTr += '<tr>';
-    insertTr += '<td class="td3"></td>';
-    insertTr += '<td class="td4">';
-    insertTr += '<div class="minus"></div>';
-    insertTr += '<div class="num1"></div>';
-    insertTr += '<div class="plus"></div>';
-    insertTr += '</td>';
-    insertTr += '</tr>';
+//로컬에서 배열을 가지고 옴
+var buylist = JSON.parse(localStorage.getItem('buyList'));
+console.log(buylist);
+//동적테이블
+var listrow = document.querySelector('#listrow');
 
-    insertTr += '<tr>';
-    insertTr += '<td class="td1"></td>';   
-    insertTr += '<td class="td2"></td>';
-    insertTr += '</tr>';
-    insertTr += '<tr>';
-    insertTr += '<td class="td3"></td>';
-    insertTr += '<td class="td4">';
-    insertTr += '<div class="minus"></div>';
-    insertTr += '<div class="num1"></div>';
-    insertTr += '<div class="plus"></div>';
-    insertTr += '</td>';
-    insertTr += '</tr>';
-  $('#table').append(insertTr);
+//함수로 바꿔서
+function buy(){
+var tbody = '';
+for (var i = 0; i < buylist.length; i++) {
+    //tbody += members[i].makeHtml(i);
 
-//배열
-var cart = [
-    {name:'에스프레소',price:4000, cnt:1, ondo:'hot', size:'tall'},
-    {name:'아메리카노',price:1000, cnt:1, ondo:'ice',size:'tall'}
-]
+    tbody += '<tr>';
+    tbody += ' <td>' + buylist[i].name + '</td>';
+    tbody += ' <td>' + buylist[i].price + '</td>';
+    tbody += ' </tr>';
+    tbody += ' <tr>';
+    tbody += ' <td>' + buylist[i].hotice + '</td>';
+    tbody += '<td>';
+    tbody += '<div class="minus" id="'+1000+i+'"></div>';
+    tbody += '<div class="num1" >'+buylist[i].count+'</div>';
+    tbody += '<div class="plus" id="'+i+'"></div>';
+    tbody += '</td>';
+    tbody += '</tr>';
 
-//수량가져오기
-$('.num1').text(cart[0].cnt);
+}
 
-//파란버튼(+)을 누르면
-$('.num1').next().click(function(){
-    $('.num1').text(cart[0].cnt++);
-    $('#text3').text(cart[0].cnt*cart[0].price);
+listrow.innerHTML = tbody;
+}
+buy();
+
+
+
+
+$('#text5').click(function(){
+        alert("준비중입니다^^");
     
+})
+
+//버튼
+
+$(".plus").click(function() {
+  /*  alert(this.id);*/
+    //숫자로 바꾸기
+    var now = Number(this.id);
+    /*alert(now);*/
+    //now를 숫자로 바꾼후
+    //코드를불러 
+    buylist[now].count+=1;
+    buy();
+});
+$(".minus").click(function() {
+   var now = Number(this.id)-10000;
+  /*  alert(now);*/
+    buylist[now].count-=1;
+    console.log(buylist);
+    
+    buy();
+
 });
 
-//빨간버튼(-)을 누르면
-$(".num1").prev().click(function(){
-    $('.num1').text(cart[0].cnt--);
-        $('#text3').text(cart[0].cnt*cart[0].price);
-    
-});
+//금액부분
+var money =0; 
+var sum = 0;
+
+for(var i = 0; i < buylist.length; i++) {
+
+    money = Number(buylist[i].count)*Number(buylist[i].price);
+    sum+=money;
+}
+
+text3.innerHTML=sum+'원';
 
 
 
-
-
-
-/*메뉴이름*/
-$('.td1').text(cart[0].name);
-$('.td2').text(cart[0].price);
-$('.td3').text(cart[0].ondo);
-$('#text3').text(cart[0].cnt*cart[0].price);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*수량*/
-/*
-  $('.plus').click(function(){
-    for(var i=0; i<cart.length ;i++){
-        
-       $('.num').text(cart[i].cnt++);
-        $('#text3').text(cart[i].cnt*cart[i].price);
-        console.log(cart[i]);
-    }
-    })
-
-
-  $('.plus').click(function(){
-       $('.num').text(cart[0].cnt++);
-        $('#text3').text(cart[0].cnt*cart[0].price);
-    
-    })
-
-
-
- $('#table').on("click",".plus",function(){
-     $(this).$('.num').text(cart[0].cnt++);
-        $('#text3').text(cart[0].cnt*cart[0].price);
-   });
-
-*/
-
-
-
+//결제하기localStorage.setItem('buyList', JSON.stringify(buylist));

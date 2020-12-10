@@ -132,6 +132,7 @@ font-weight: bolder;
     text-align: center;
     line-height: 33px;
     color: white;
+    cursor:pointer;
 }
 a{
     text-decoration: none;
