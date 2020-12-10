@@ -1,4 +1,3 @@
-
 // 동적 메뉴 생성
 var coffees = [];
 var nonCoffees = [];
@@ -66,17 +65,7 @@ function addMenu {
     
 }
 
-// 장바구니 수량 변경 이벤트
-function changeQty {
-    
-}
-
-// 장바구니 수량 변경시 금액 변경 이벤트
-function changePriceByQ {
-    
-}
-
-// 장바구니 총주문금액 변경 이벤트
+// 장바구니 선택삭제 이벤트
 function changeTotalPrice {
     
 }
