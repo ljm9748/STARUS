@@ -18,9 +18,9 @@ for (var i = 0; i < buylist.length; i++) {
     tbody += ' <tr>';
     tbody += ' <td>' + buylist[i].hotice + '</td>';
     tbody += '<td>';
-    tbody += '<img class="minus" src="../images/icon/plus.png" width=15px id="'+1000+i+'">';
+    tbody += '<img class="plus" src="../images/icon/plus.png" width=15px id="'+1000+i+'">';
     tbody += '<div class="num1" >'+buylist[i].count+'</div>';
-    tbody += '<img class="plus" src="../images/icon/minus.png" width=15px id="'+i+'">';
+    tbody += '<img class="minus" src="../images/icon/minus.png" width=15px id="'+i+'">';
     tbody += '</td>';
     tbody += '</tr>';
 
@@ -31,15 +31,18 @@ listrow.innerHTML = tbody;
 buy();
 
 
-
+//선택 삭제
 $('#delete').click(function(){
         alert("준비중입니다^^");
-    
-})
-$('#order').click(function(){
-    location.replace('../kjh/pay.html');   
-   localStorage.setItem('buyList', JSON.stringify(buylist));
-})
+});
+     
+//전체 삭제
+$('#reset').click(function(){
+    localStorage.clear();
+    location.reload();
+});
+     
+     
 //버튼
 
 $(".plus").click(function() {
