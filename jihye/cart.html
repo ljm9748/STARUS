@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="cart.css">
     <script src="https://code.jquery.com/jquery-1.12.4.min.js">
     </script>
+    <script src="../jungeun/coffee.json"></script>
             
 </head>
 
@@ -18,37 +19,29 @@
         <!--장바구니 속-->
         <div id="menu" >
             <table id="table">
-            <tr>
-                <td class="td1">에스프레소</td>
-                <td class="td2">4,100원</td>
+           <tr>
+                <td class="td1">cart[0,name]</td>
+                <td class="td2">4,100</td>
             </tr>
             <tr>
                 <td class="td3">(HOT/Tall)</td>
                 <td class="td4">
                 <input class="minus" value="-" type="button" count_range="m">
-                <input class="count" value="1" readonly name="num">
+                <input class="num" readonly name="num">
                 <input class="plus" value="+" type="button" count_range="p">
                 </td>
-            </tr>
                 
-            <!--    
-                <div id="menutext1">에스프레소</div>
-                <div id="menutext2">(HOT/Tall)</div>
-                <div id="menutext3">4,100원</div>
-                <div id="menunum">01</div>
-                <div id="plus"><img src="plus.png"></div>
-                <div id="minus"><img src="minus.png"></div>
-            -->            
-                
+            </tr>                  
             </table>
         </div>
         
         <!--총 주문금액-->
         <div id="foot">
             <div id="hrline"><hr></div>
-            <div id="text2">총 주문 금액:</div>
-            <div id="text3">9,600원</div>
-            <a id="text4" href="card.html">전체 초기화</a> <!--새로고침할 페이지 주소-->
+            <div id="text2">총 주문 금액: </div>
+            <div id="text3"></div>
+            <div id="text5">선택삭제</div>
+            <a id="text4" href="card.html">초기화</a> <!--새로고침할 페이지 주소-->
 
         </div>
 
