@@ -96,13 +96,27 @@ font-weight: bolder;
 #text4 {
     position: absolute;
 
-    width: 160px;
-    height: 30px;
+    width: 70px;
+    height: 33px;
+    background-color: #666666;
+    border-radius: 7px;
+    top:94px;
+    right:20px;
+    text-align: center;
+     line-height: 33px;
+    color: white;
+}
+
+#text5 {
+    position: absolute;
+    width: 70px;
+    height: 33px;
     background-color: #666666;
     border-radius: 7px;
     top:94px;
     left:20px;
     text-align: center;
+    line-height: 33px;
     color: white;
 }
 a{
