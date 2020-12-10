@@ -32,22 +32,32 @@
             <!--            주문 테이블 헤드-->
             <table class="orderthead">
                 <tr>
-                    <td>메뉴</td>
-                    <td>수량</td>
-                    <td>가격</td>
+                    <td class="othmenu">메뉴</td>
+                    <td class="oth">수량</td>
+                    <td class="oth">가격</td>
                 </tr>
             </table>
 
             <!--            주문 테이블 목록-->
-            <div class="orderlist">
+            <div class="orderlist" style="overflow-y: scroll">
                 <table class="ordertbody">
-                    <tr>
-                        <td>
-                            <img src="../images/coffee/cafe_americano.jpg" style="width: 50px; height: 50px;">
-                        </td>
-                        <td>1</td>
-                        <td>4,100원</td>
-                    </tr>
+                    <tbody id="orderlistrow">
+                        <tr>
+                            <td class="otft">
+                            </td>
+                            <td class="ottd"></td>
+                            <td class="ottd"></td>
+                        </tr>
+<!--                        예시 주문 목록-->
+                        <tr>
+                            <td class="otft">
+                                <img src="../images/coffee/cafe_americano.jpg">
+                                아메리카노 ICE / GRANDE
+                            </td>
+                            <td class="ottd">1</td>
+                            <td class="ottd">4,100원</td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
 
