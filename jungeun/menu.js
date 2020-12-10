@@ -1,44 +1,133 @@
-// 동적 메뉴 생성
-var coffees = [];
-var nonCoffees = [];
-var sandwiches = [];
-var cakes = [];
+// NAVI 바
+   
+    
+$(document).ready(function() {
 
-// 각 카테고리의 배열을 담는 배열
-var category = [];
+    $('#nav_detail_bev').show();
+    
+   /* $('.coffee').css('display', 'inline-block');
+    $('.noncoffee').css('display', 'none');
+    $('.sandwitch').css('display', 'none');
+    $('.cake').css('display', 'none');*/
+    
+    /*각 세부 메뉴들에대해 터치가되면 색이 반전된다*/
+    $('#nav_coffee').on({
+        
+        mouseenter: function() {
+            $('#nav_coffee').addClass('over3');
+        },
+        mouseleave: function() {
+            $('#nav_coffee').removeClass('over3');
+        },
+        click: function() {
+            $('#nav_coffee').addClass('underline1');
 
-// JSON 파일 로드 --> JS배열로 변환
-function jsonParse() {
-    // JSON 파일을 get 해서 로컬스토리지에 set하기
-    // 각 카테고리별로 배열 만들어 parsing하기
-    // 메뉴생성 메서드 호출
-    $.getJSON('coffee.json', function(data) {
-        localStorage.setItem('coffees', JSON.stringify(data));
-        coffees = JSON.parse(localStorage.getItem("coffees"));
-        category.push(coffees);
+            $('#nav_noncoffee').removeClass('underline2');
+            $('#nav_sandwitch').removeClass('underline3');
+            $('#nav_cake').removeClass('underline4');
+        }
+    });
+    
+
+    
+    $('#nav_noncoffee').on({
+        mouseenter: function() {
+            $('#nav_noncoffee').addClass('over1');
+        },
+        mouseleave: function() {
+            $('#nav_noncoffee').removeClass('over1');
+        },
+        click: function() {
+            $('#nav_noncoffee').addClass('underline2');
+
+            $('#nav_coffee').removeClass('underline1');
+            $('#nav_sandwitch').removeClass('underline3');
+            $('#nav_cake').removeClass('underline4');
+            
+            $('.coffee').removeAttr('display');
+            
+            /*$('.coffee').hide();
+            $('.noncoffee').show();
+            $('.sandwich').hide();
+            $('.cake').hide();*/
+
+        }
     });
 
-    $.getJSON('nonCoffee.json', function(data) {
-        localStorage.setItem('nonCoffees', JSON.stringify(data));
-        nonCoffees = JSON.parse(localStorage.getItem("nonCoffees"));
-        category.push(nonCoffees);
+    $('#nav_sandwitch').on({
+        mouseenter: function() {
+            $('#nav_sandwitch').addClass('over2');
+        },
+        mouseleave: function() {
+            $('#nav_sandwitch').removeClass('over2');
+        },
+        click: function() {
+            $('#nav_sandwitch').addClass('underline3');
+
+            $('#nav_coffee').removeClass('underline1');
+            $('#nav_noncoffee').removeClass('underline2');
+            $('#nav_cake').removeClass('underline4');
+            
+            $('.coffee').hide();
+            $('.noncoffee').hide();
+            $('.sandwich').show();
+            $('.cake').hide();
+        }
     });
 
-    $.getJSON('sandwich.json', function(data) {
-        localStorage.setItem('sandwiches', JSON.stringify(data));
-        sandwiches = JSON.parse(localStorage.getItem("sandwiches"));
-        category.push(sandwiches);
+    $('#nav_cake').on({
+        mouseenter: function() {
+            $('#nav_cake').addClass('over4');
+        },
+        mouseleave: function() {
+            $('#nav_cake').removeClass('over4');
+        },
+        click: function() {
+            $('#nav_cake').addClass('underline4');
+            $('#nav_coffee').removeClass('underline1');
+            $('#nav_noncoffee').removeClass('underline2');
+            $('#nav_sandwitch').removeClass('underline3');
+            
+            $('.coffee').hide();
+            $('.noncoffee').hide();
+            $('.sandwich').hide();
+            $('.cake').show();
+        }
     });
 
-    $.getJSON('cake.json', function(data) {
-        localStorage.setItem('cakes', JSON.stringify(data));
-        cakes = JSON.parse(localStorage.getItem("cakes"));
-        category.push(cakes);
+    /*음료나 푸드를 클릭(터치)하면 세부메뉴가 보여진다
+            그리고 아래 하이라이트 언더라인이 생기고 다른메뉴를
+            클릭할시 언더라인이 사라진다*/
+    $('#nav_category_bev').click(function() {
+        $('#nav_detail_bev').show();
+        $('#nav_detail_food').hide();
+        $('#nav_category_bev').addClass('underline_a');
+        $('#nav_category_food').removeClass('underline_b');
+
+        $('#nav_coffee').removeClass('underline1');
+        $('#nav_noncoffee').removeClass('underline2');
+        $('#nav_sandwitch').removeClass('underline3');
+        $('#nav_cake').removeClass('underline4');
     });
 
-}
+    $('#nav_category_food').click(function() {
+        $('#nav_detail_food').show();
+        $('#nav_detail_bev').hide();
+        $('#nav_category_food').addClass('underline_b');
+        $('#nav_category_bev').removeClass('underline_a');
+
+        $('#nav_coffee').removeClass('underline1');
+        $('#nav_noncoffee').removeClass('underline2');
+        $('#nav_sandwitch').removeClass('underline3');
+        $('#nav_cake').removeClass('underline4');
+    });
 
 
+
+});
+
+
+// 메뉴 ---------------------------------------
 
 // 메뉴이미지 선택 이벤트 : 클릭 시 옵션페이지 로드 
 $(document).on('click', function() {
@@ -57,28 +146,3 @@ $(document).on('click', function() {
     location.replace('');
 });
 
-
-
-// 장바구니에 메뉴 추가 이벤트 
-function addMenu {
-
-}
-
-<<<<<<< HEAD
-// 장바구니 선택삭제 이벤트
-=======
-// 장바구니 수량 변경 이벤트
-function changeQty {
-
-}
-
-// 장바구니 수량 변경시 금액 변경 이벤트
-function changePriceByQ {
-
-}
-
-// 장바구니 총주문금액 변경 이벤트
->>>>>>> origin/main
-function changeTotalPrice {
-
-}
