@@ -25,144 +25,18 @@
     <!--menu.css를 로드-->
     <link rel="stylesheet" href="menu.css">
     
-    <!--menu.js를 로드
-    <script src="menu.js"></script>-->
+    <!--menu.js를 로드 -->
+    <script src="menu.js"></script>
     
     <script src="../jungmin/start.js"></script>
-    <script src="../hyo0/navi.html"></script>
-    
-    <style>
-        .display_inline_block {
-            display: inline-block;
-        }
-        
-        .display_none {
-            display: none;
-        }
-        
-    </style>
-    
-    
-    <script>
-        
-    
-        $(document).ready(function() {
 
-            $('#nav_coffee').on({
-                mouseenter: function() {
-                    $('#nav_coffee').addClass('over3');
-                },
-                mouseleave: function() {
-                    $('#nav_coffee').removeClass('over3');
-                },
-                click: function() {
-                    $('#nav_coffee').addClass('underline1');
-                    
-                    $('#nav_noncoffee').removeClass('underline2');
-                    $('#nav_sandwitch').removeClass('underline3');
-                    $('#nav_cake').removeClass('underline4');
-                    
-                    
-                }
-            });
-
-            $('#nav_noncoffee').on({
-                mouseenter: function() {
-                    $('#nav_noncoffee').addClass('over1');
-                },
-                mouseleave: function() {
-                    $('#nav_noncoffee').removeClass('over1');
-                },
-                click: function() {
-                    $('#nav_noncoffee').addClass('underline2');
-                    
-                    $('#nav_coffee').removeClass('underline1');
-                    $('#nav_sandwitch').removeClass('underline3');
-                    $('#nav_cake').removeClass('underline4');
-                    
-                     // 세부메뉴를 클릭하면 해당 메뉴만 display
-                    $('tr').addClass('display_inline_block');
-                   $('#nav_coffee').removeAttr('display');
-                }
-            });
-
-            $('#nav_sandwitch').on({
-                mouseenter: function() {
-                    $('#nav_sandwitch').addClass('over2');
-                },
-                mouseleave: function() {
-                    $('#nav_sandwitch').removeClass('over2');
-                },
-                click: function() {
-                    $('#nav_sandwitch').addClass('underline3');
-                    
-                    $('#nav_coffee').removeClass('underline1');
-                    $('#nav_noncoffee').removeClass('underline2');
-                    $('#nav_cake').removeClass('underline4');
-                    
-                   // 세부메뉴를 클릭하면 해당 메뉴만 display
-                    $('tr').addClass('display_inline_block');
-                   $('#nav_coffee').removeAttr('display');
-                }
-            });
-
-            $('#nav_cake').on({
-                mouseenter: function() {
-                    $('#nav_cake').addClass('over4');
-                },
-                mouseleave: function() {
-                    $('#nav_cake').removeClass('over4');
-                },
-                click: function() {
-                    $('#nav_cake').addClass('underline4');
-                    
-                    $('#nav_coffee').removeClass('underline1');
-                    $('#nav_noncoffee').removeClass('underline2');
-                    $('#nav_sandwitch').removeClass('underline3');
-                    
-                     // 세부메뉴를 클릭하면 해당 메뉴만 display
-                    $('tr').addClass('display_inline_block');
-                   $('#nav_coffee').removeAttr('display');
-                }
-            });
-
-            $('#nav_category_bev').click(function() {
-                $('#nav_detail_bev').show();
-                $('#nav_detail_food').hide();
-                $('#nav_category_bev').addClass('underline_a');
-                $('#nav_category_food').removeClass('underline_b');
-                
-                $('#nav_coffee').removeClass('underline1');
-                $('#nav_noncoffee').removeClass('underline2');
-                $('#nav_sandwitch').removeClass('underline3');
-                $('#nav_cake').removeClass('underline4');
-            });
-
-            $('#nav_category_food').click(function() {
-                $('#nav_detail_food').show();
-                $('#nav_detail_bev').hide();
-                $('#nav_category_food').addClass('underline_b');
-                $('#nav_category_bev').removeClass('underline_a');
-                
-                $('#nav_coffee').removeClass('underline1');
-                $('#nav_noncoffee').removeClass('underline2');
-                $('#nav_sandwitch').removeClass('underline3');
-                $('#nav_cake').removeClass('underline4');
-            });
-
-            
-
-        });
-        
-    </script>
-    
-    
+      
 </head>
 
 <body>
     
-    <!-- navi.html ------------------------------->
-    <table>
+    <!-- NAVI 바 ------------------------------->
+    <table class="nav">
         <tr>
             <td colspan="4" id="nav_main">STARUS</td>
         </tr>
@@ -178,43 +52,8 @@
             <td id="nav_sandwitch">SANDWITCH</td>
             <td id="nav_cake">CAKE</td>
         </tr>
-        
+
     </table>
-
-    <!-- NAV바 (임시용) ------------------------------->
-    <!--<header>
-        <h2>STARUS</h2>
-    </header>
-
-
-    <nav>
-        <table>
-            <tr>
-                <td colspan="2">
-                    <h4>음료</h4>
-                </td>
-                <td colspan="2">
-                    <h4>푸드</h4>
-                </td>
-
-            </tr>
-            <tr>
-                <td>
-                    <h5>COFFEE</h5>
-                </td>
-                <td>
-                    <h5>NON-COFFEE</h5>
-                </td>
-                <td>
-                    <h5>SANDWICH</h5>
-                </td>
-                <td>
-                    <h5>CAKE</h5>
-                </td>
-            </tr>
-
-        </table>
-    </nav>-->
 
     
     <!-- 메뉴 -------------------->
@@ -258,7 +97,7 @@
         </div>
 
         <!-- 2. 논커피 -->
-        <div class="non-coffee">
+        <div class="noncoffee">
             <table>
                 <tr>
                     <td>
