@@ -1,3 +1,15 @@
+var cart = [
+    {name:'에스프레소',price:4200, cnt:1},
+    {name:'아메리카노',price:4500, cnt:1}
+]
+
+$('input:text').text(cart[0].cnt);
+
+
+
+/*
+$('.num').text(cart[0].cnt);
+*/
 /*수량변경*/
     $(function(){ 
       $('.plus').click(function(){ 
@@ -10,9 +22,34 @@
         var num = $(".num:eq("+n+")").val();
           if(num!=0){
         num = $(".num:eq("+n+")").val(num*1-1); 
+            
           }else{num=0;}
         });
     })
+    
+/*    $('.plus').click(function(){
+        var nn = cart[0].cnt;
+        nn++;
+        $('.num')+1;
+        console.log(nn);
+        
+    $('.num').text(cart[0].cnt)
+        
+    })*/
+
+
+
+
+console.log(cart[0].name);
+var na = cart[0].name;
+$('.td1').text(na);
+$('.td2').text(cart[0].price);
+
+
+/*버튼*/
+
+
+
 /*가격변경*/
 
 /* 데이터 가져오기 실험 실패
