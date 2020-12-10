@@ -68,7 +68,8 @@
 /*    border: 1px solid skyblue;*/
     width: 605px;
     margin: 20px 80px;
-    height: 300px;
+    height: 270px;
+    border-bottom: 1px solid #aaa;
 }
 
 .orderlist::-webkit-scrollbar {
@@ -171,7 +172,7 @@
 
 /*결제수단*/
 #cardchoice {
-    margin: 100px 80px;
+    margin: 90px 80px;
 }
 
 #paychoice {
