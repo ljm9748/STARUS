@@ -1,110 +1,104 @@
+var insertTr = '';
+    insertTr += '<tr>';
+    insertTr += '<td class="td1"></td>';   
+    insertTr += '<td class="td2"></td>';
+    insertTr += '</tr>';
+    insertTr += '<tr>';
+    insertTr += '<td class="td3"></td>';
+    insertTr += '<td class="td4">';
+    insertTr += '<div class="minus"></div>';
+    insertTr += '<div class="num1"></div>';
+    insertTr += '<div class="plus"></div>';
+    insertTr += '</td>';
+    insertTr += '</tr>';
+
+    insertTr += '<tr>';
+    insertTr += '<td class="td1"></td>';   
+    insertTr += '<td class="td2"></td>';
+    insertTr += '</tr>';
+    insertTr += '<tr>';
+    insertTr += '<td class="td3"></td>';
+    insertTr += '<td class="td4">';
+    insertTr += '<div class="minus"></div>';
+    insertTr += '<div class="num1"></div>';
+    insertTr += '<div class="plus"></div>';
+    insertTr += '</td>';
+    insertTr += '</tr>';
+  $('#table').append(insertTr);
+
+//배열
 var cart = [
-    {name:'에스프레소',price:4200, cnt:1},
-    {name:'아메리카노',price:4500, cnt:1}
+    {name:'에스프레소',price:4000, cnt:1, ondo:'hot', size:'tall'},
+    {name:'아메리카노',price:1000, cnt:1, ondo:'ice',size:'tall'}
 ]
 
-$('input:text').text(cart[0].cnt);
+//수량가져오기
+$('.num1').text(cart[0].cnt);
 
-
-
-/*
-$('.num').text(cart[0].cnt);
-*/
-/*수량변경*/
-    $(function(){ 
-      $('.plus').click(function(){ 
-        var n = $('.plus').index(this);
-        var num = $(".num:eq("+n+")").val();
-        num = $(".num:eq("+n+")").val(num*1+1); 
-      });
-      $('.minus').click(function(){ 
-        var n = $('.minus').index(this);
-        var num = $(".num:eq("+n+")").val();
-          if(num!=0){
-        num = $(".num:eq("+n+")").val(num*1-1); 
-            
-          }else{num=0;}
-        });
-    })
+//파란버튼(+)을 누르면
+$('.num1').next().click(function(){
+    $('.num1').text(cart[0].cnt++);
+    $('#text3').text(cart[0].cnt*cart[0].price);
     
-/*    $('.plus').click(function(){
-        var nn = cart[0].cnt;
-        nn++;
-        $('.num')+1;
-        console.log(nn);
-        
-    $('.num').text(cart[0].cnt)
-        
-    })*/
+});
+
+//빨간버튼(-)을 누르면
+$(".num1").prev().click(function(){
+    $('.num1').text(cart[0].cnt--);
+        $('#text3').text(cart[0].cnt*cart[0].price);
+    
+});
 
 
 
 
-console.log(cart[0].name);
-var na = cart[0].name;
-$('.td1').text(na);
+
+
+/*메뉴이름*/
+$('.td1').text(cart[0].name);
 $('.td2').text(cart[0].price);
+$('.td3').text(cart[0].ondo);
+$('#text3').text(cart[0].cnt*cart[0].price);
 
 
-/*버튼*/
 
 
 
-/*가격변경*/
 
-/* 데이터 가져오기 실험 실패
-    $.getJSON('../jungeun/coffee',function(data){
-        var mydata=JSON.parse(coffee);
-        var html = '';
-        html+='<tr>';
-        html+='<td class="td1">'+mydata[0].name+'</td>'
-        html+='<td class="td2">'+mydata[0].price+'</td>'
-        html+='</tr>'
-        html+='<tr>'
-        html+= '<td class="td3">(HOT/Tall)</td>'
-        html+= '<td class="td4"><input class="minus" value="-" type="button" count_range="m"><input class="num" value="1" readonly name="num"><input class="plus" value="+" type="button" count_range="p">'
-        html+='</td>'
-        html+='</tr>'   
-        $('#data').append(html);
+
+
+
+
+
+
+
+
+/*수량*/
+/*
+  $('.plus').click(function(){
+    for(var i=0; i<cart.length ;i++){
         
-        
-    });*/
-/*function calsum{
-const table = document.getElementById('menu');
-
-//합계계산
-let sum =0;
-for(let i=0; i<table.rows.length;i++){
-    sum+= parseInt(table.rows[i].cells[1].innerHTML);
-}
-document.getElementById('sum').innerHTML=sum;
-}*/
-
-//테이블 합계 계산
-var rowCnt=0; 
-var sum = 0; //합계
-var fakesum =0; 
-$("#table").each(function(){
- 
-//루프 row
-    var sell = $(this).children("td");
-    if(rowCnt%2==0){//짝수행-가격부분
-    $(sell).each(function(){
-        var val = $(this).text();
-        fakesum += parseInt(val)
-    })
-    }else{//홀수행-수량
-    $(sell).each(function(){
-       $('input[class=num]').click(function() {
-        var val=$(this).val();
-           fakesum = fakesum * parseInt(val)
-           sum=fakesum;
-           fakesum=0;
-       });
-        
-    })    
+       $('.num').text(cart[i].cnt++);
+        $('#text3').text(cart[i].cnt*cart[i].price);
+        console.log(cart[i]);
     }
-    rowCnt++;
-})
+    })
 
-$('#text3').text(sum);
+
+  $('.plus').click(function(){
+       $('.num').text(cart[0].cnt++);
+        $('#text3').text(cart[0].cnt*cart[0].price);
+    
+    })
+
+
+
+ $('#table').on("click",".plus",function(){
+     $(this).$('.num').text(cart[0].cnt++);
+        $('#text3').text(cart[0].cnt*cart[0].price);
+   });
+
+*/
+
+
+
