@@ -5,87 +5,131 @@
 var ordermenu = [];
 
 // 생성자 함수 Ordermenu
-function Ordermenu(odimg, odname, odhotice, odsize, odqnt, odprice) {
-    this.img = odimg;
-    this.name = odname;
-    this.온도 = odhotice;
-    this.사이즈 = odsize;
-    this.수량 = odqnt;
-    this.price = odprice;
-};
+//function Ordermenu(odimg, odname, odhotice, odsize, odqnt, odprice) {
+//    this.img = odimg;
+//    this.name = odname;
+//    this.온도 = odhotice;
+//    this.사이즈 = odsize;
+//    this.수량 = odqnt;
+//    this.price = odprice;
+//};
 
-// 장바구니에서 주문 목록 가져오기
+
 window.onload = function () {
+    // 장바구니에서 주문 목록 가져오기
+    //    ordermenu = JSON.parse(localStorage.getItem('buyList'));
 
     // localStorage 저장
-    if (localStorage.getItem('cartmenu') == null) {
-        localStorage.setItem('cartmenu', JSON.stringify(cartmenu));
+    if (localStorage.getItem('buyList') == null) {
+        localStorage.setItem('buyList', JSON.stringify(ordermenu));
     } else {
-        ordermenu = JSON.parse(localStorage.getItem('cartmenu'));
+        ordermenu = JSON.parse(localStorage.getItem('buyList'));
 
-        console.log(cartmenu);
-
-        showOrderlist();
     }
 
-};
+    //    for(var i=0; i<ordermenu.length; i++){
+    //        console.log(ordermenu[i]);
+    //    }
 
-// 주문 목록 보여주기
-function showOderlist() {
+    console.log(ordermenu[0]);
+    console.log(ordermenu[0].img);
 
-    // table ordertbody 캐스팅
-    var orderlistrow = document.querySelector('#orderlistrow');
-
-    var tbody = '';
-
-    for (var i = 0; i < menu.length; i++) {
-        tbody += '<tr>';
-        tbody += '<td class="otft"><img src="' + ordermenu[i].img + '">' + ordermenu[i].name + ordermenu[i].온도 + '/' + ordermenu[i].사이즈 + '</td>';
-        tbody += '<td class="ottd">' + ordermenu[i].수량 + '</td>';
-        tbody += '<td class="ottd">' + ordermenu[i].price + '원</td>';
-        tbody += '</tr>';
+    var sum = 0;
+    for (var i = 0; i < ordermenu.length; i++) {
+        sum = sum + Number(ordermenu[i].price);
+        console.log('금액합계', sum);
     }
 
-    orderlistrow.innerHTML = tbody;
+
+    // 주문 목록 보여주기
+    function showOderlist() {
+
+        // table ordertbody 캐스팅
+        var orderlistrow = document.querySelector('#orderlistrow');
+
+        var tbody = '';
+
+        for (var i = 0; i < ordermenu.length; i++) {
+            tbody += '<tr>';
+            tbody += '<td class="otft">';
+            tbody += '<img src="' + ordermenu[i].img + '">';
+            tbody += '<span>' + ordermenu[i].name + '</span>';
+            tbody += '<span>' + ordermenu[i].hotice + '</span>';
+            tbody += '<span>' + ordermenu[i].size + '</span>';
+            tbody += '</td>';
+            tbody += '<td class="ottd">1</td>';
+            tbody += '<td class="ottd">' + ordermenu[i].price + '원</td>';
+            tbody += '</tr>';
+        }
+
+        orderlistrow.innerHTML = tbody;
+
+    };
+    showOderlist();
+
+
+    // 총 금액 보여주기
+    function showPricesum() {
+
+        var odsum = 0;
+        for (var i = 0; i < ordermenu.length; i++) {
+            odsum += Number(ordermenu[i].price);
+        }
+
+        // 캐스팅
+        var pricesum = document.querySelector('#pricesum');
+
+        var div = '<span>총 금액 :</span>';
+        div += '<span>' + odsum + '원</span>';
+
+        pricesum.innerHTML = div;
+
+    };
+    showPricesum();
+
 
 };
-showOderlist();
-
-// 총 금액 보여주기
-function showPricesum() {
-
-    // 캐스팅
-    var pricesum = document.querySelector('#pricesum');
-
-    var div = '<span>총 금액 :</span>';
-    div += '<span>'+ordermenu[i].총 금액+'원</span>';
-
-    pricesum.innerHTML = div;
-
-};
-showPricesum();
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//// 주문 목록 보여주기
+//function showOderlist() {
+//
+//    // table ordertbody 캐스팅
+//    var orderlistrow = document.querySelector('#orderlistrow');
+//
+//    var tbody = '';
+//
+//    for (var i = 0; i < ordermenu.length; i++) {
+//        tbody += '<tr>';
+//        tbody += '  <td class="otft">';
+//        tbody += '<img src="'+ordermenu[i].img+'">
+//<span>'+ordermenu[i].name+'</span>
+//<span>'+ordermenu[i].hotice+'</span>
+//<span>'+ordermenu[i].size+'</span>';
+//        tbody +='   </td>';
+//        tbody += '<td class="ottd">1</td>';
+//        tbody += '<td class="ottd">' + ordermenu[i].price + '원</td>';
+//        tbody += '</tr>';
+//    }
+//
+//    orderlistrow.innerHTML = tbody;
+//
+//};
+//
+//// 총 금액 보여주기
+//function showPricesum() {
+//
+//    var odsum = 0;
+//    for (var i = 0; i < ordermenu.length; i++) {
+//        odsum += Number(ordermenu[i].price);
+//    }
+//
+//    // 캐스팅
+//    var pricesum = document.querySelector('#pricesum');
+//
+//    var div = '<span>총 금액 :</span>';
+//    div += '<span>' + odsum + '원</span>';
+//
+//    pricesum.innerHTML = div;
+//
+//};
