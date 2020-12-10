@@ -181,7 +181,6 @@ $(document).ready(function() {
     $('img').on("click", function() {
 
         let tmpnum = Number(this.id);
-        alert("Id: " + tmpnum);
         let nowitem;
         if (tmpnum < 10) {
             nowitem = coffee[tmpnum];
@@ -195,7 +194,6 @@ $(document).ready(function() {
             tmpnum = tmpnum - 30;
             nowitem = cake[tmpnum];
         }
-        alert("Id: " + nowitem.id);
         localStorage.setItem('nowitem', JSON.stringify(nowitem));
         location.replace('../jungmin/detail.html');
     });
