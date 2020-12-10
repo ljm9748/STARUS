@@ -17,9 +17,9 @@ for (var i = 0; i < buylist.length; i++) {
     tbody += ' <tr>';
     tbody += ' <td>' + buylist[i].hotice + '</td>';
     tbody += '<td>';
-    tbody += '<img class="minus" src="../images/icon/plus.png" width=15px id="'+1000+i+'">';
+    tbody += '<div class="minus" id="'+1000+i+'"></div>';
     tbody += '<div class="num1" >'+buylist[i].count+'</div>';
-    tbody += '<img class="plus" src="../images/icon/minus.png" width=15px id="'+i+'">';
+    tbody += '<div class="plus" id="'+i+'"></div>';
     tbody += '</td>';
     tbody += '</tr>';
 
@@ -31,14 +31,12 @@ buy();
 
 
 
-$('#delete').click(function(){
+
+$('#text5').click(function(){
         alert("준비중입니다^^");
     
 })
-$('#order').click(function(){
-    location.replace('../kjh/pay.html');   
-   localStorage.setItem('buyList', JSON.stringify(buylist));
-})
+
 //버튼
 
 $(".plus").click(function() {
@@ -61,7 +59,6 @@ $(".minus").click(function() {
 
 });
 
-
 //금액부분
 var money =0; 
 var sum = 0;
@@ -75,8 +72,5 @@ for(var i = 0; i < buylist.length; i++) {
 text3.innerHTML=sum+'원';
 
 
-//주문하기 버튼 왜 안돼
-$('#order').click(function(){
-    location.replace('../kjh/pay.html');   
-   localStorage.setItem('buyList', JSON.stringify(buylist));
-});
+
+//결제하기localStorage.setItem('buyList', JSON.stringify(buylist));
