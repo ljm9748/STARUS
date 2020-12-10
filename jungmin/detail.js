@@ -1,5 +1,5 @@
 let nowitem;
-nowitem = JSON.parse(localStorage.getItem('noncoffee'))[3];
+nowitem = JSON.parse(localStorage.getItem('nowitem'));
 console.log(nowitem);
 dt_page();
 $(document).ready(function() {
