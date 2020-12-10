@@ -1,33 +1,6 @@
 // 회원정보 ordermenu 객체들을 저장하는 배열
 var ordermenu = [];
 
-// 생성자 함수 Ordermenu
-function Ordermenu(odimg, odname, odhotice, odsize, odqnt, odprice) {
-    this.img = odimg;
-    this.name = odname;
-    this.온도 = odhotice;
-    this.사이즈 = odsize;
-    this.수량 = odqnt;
-    this.price = odprice;
-};
-
-// 장바구니에서 주문 목록 가져오기
-window.onload = function () {
-
-    // localStorage 저장
-    if (localStorage.getItem('cartmenu') == null) {
-        localStorage.setItem('cartmenu', JSON.stringify(cartmenu));
-    } else {
-        ordermenu = JSON.parse(localStorage.getItem('cartmenu'));
-
-        console.log(cartmenu);
-
-        showOrderlist();
-    }
-
-};
-
-
 // 주문번호 출력
 function showOrdernum () {
 
@@ -71,7 +44,25 @@ function showOrdernum () {
 
 
 };
-showOrdernum();
+
+
+
+
+window.onload = function(){
+    showOrdernum();
+
+    // localStorage 가져오기
+    if (localStorage.getItem('buyList') == null) {
+        localStorage.setItem('buyList', JSON.stringify(ordermenu));
+    } else {
+        ordermenu = JSON.parse(localStorage.getItem('buyList'));
+
+    }
+
+    // 삭제
+//    localStorage.removeItem('buyList');
+
+};
 
 
 
