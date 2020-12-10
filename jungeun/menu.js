@@ -5,10 +5,10 @@ $(document).ready(function() {
 
     $('#nav_detail_bev').show();
     
-   /* $('.coffee').css('display', 'inline-block');
+    $('.coffee').css('display', 'inline-block');
     $('.noncoffee').css('display', 'none');
     $('.sandwitch').css('display', 'none');
-    $('.cake').css('display', 'none');*/
+    $('.cake').css('display', 'none');
     
     /*각 세부 메뉴들에대해 터치가되면 색이 반전된다*/
     $('#nav_coffee').on({
@@ -44,12 +44,12 @@ $(document).ready(function() {
             $('#nav_sandwitch').removeClass('underline3');
             $('#nav_cake').removeClass('underline4');
             
-            $('.coffee').removeAttr('display');
+            /*$('.coffee').removeAttr('display');*/
             
-            /*$('.coffee').hide();
+            $('.coffee').hide();
             $('.noncoffee').show();
             $('.sandwich').hide();
-            $('.cake').hide();*/
+            $('.cake').hide();
 
         }
     });
@@ -130,19 +130,19 @@ $(document).ready(function() {
 // 메뉴 ---------------------------------------
 
 // 메뉴이미지 선택 이벤트 : 클릭 시 옵션페이지 로드 
-$(document).on('click', function() {
+/*$(document).on('click', function() {
     location.replace('../jungmin/detail.html');
-});
+});*/
 
 
 
 // 홈 버튼 이벤트 : 클릭 시 매장/포장 선택 가능한 mainpage 로드
-$(document).on('click', function() {
+/*$(document).on('click', function() {
     location.replace('../uri/mainpage.html');
-});
+});*/
 
 // 주문 버튼 이벤트 : 클릭 시 결제 가능한 pay 페이지 로드
-$(document).on('click', function() {
+/*$(document).on('click', function() {
     location.replace('');
-});
+});*/
 
