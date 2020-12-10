@@ -11,32 +11,101 @@ body {
 }
 
 
-/* NAV 바 (임시용) ---------------------------------*/
+/* NAVI 바 ---------------------------------*/
 
-/*스타어스*/
-header {
-    height: 60px;
-    background-color: black;
-    color: white;
-    text-align: center;
-}
+ .nav td {
+     width: 765px;
+     text-align: center;
+     font-weight: bold;
+     font-family: 'Noto Sans KR', sans-serif;
+ }
 
-nav {
-    width
-    height: auto;
-    text-align: center;
-}
+ #nav_main {
+     background-color: black;
+     color: white;
+     height: 60px;
+     font-family: 'Santana';
+     font-size: 30px;
 
-nav>table {
-    width: 765px;
-}
+ }
 
-/*카테고리바(음료/푸드)*/
-nav>table tr{
-    height: 50px;
-    border-bottom: 1px solid #aaa;
-}
+ #nav_category_bev {
+     border-bottom: 1px solid #999;
+     height: 50px;
+ }
 
+ #nav_category_bev.underline_a {
+     border-bottom: 3px solid black;
+     font-size: 25px;
+ }
+
+ #nav_category_food {
+     border-bottom: 1px solid #999;
+     height: 50px;
+ }
+
+ #nav_category_food.underline_b {
+     border-bottom: 3px solid black;
+     font-size: 25px;
+ }
+
+ #nav_coffee {
+     height: 50px;
+ }
+
+ /*마우스오버연초록*/
+ td.over1 {
+     background-color: #027353;
+     color: white;
+ }
+
+ /*마우스오버찐초록*/
+ td.over2 {
+     background-color: #025940;
+     color: white;
+ }
+
+ /*마우스오버갈색*/
+ td.over3 {
+     background-color: #73534C;
+     color: white;
+ }
+
+ /*마우스오버팥색*/
+ td.over4 {
+     background-color: #BF988F;
+     color: white;
+ }
+
+ #nav_detail_bev {
+     height: 50px;
+     display: none;
+ }
+
+ #nav_detail_food {
+     height: 50px;
+     display: none;
+ }
+
+ #nav_coffee.underline1 {
+     border-bottom: 3px solid black;
+     font-size: 25px;
+ }
+
+ #nav_noncoffee.underline2 {
+     border-bottom: 3px solid black;
+     font-size: 25px;
+ }
+
+ #nav_sandwitch.underline3 {
+     border-bottom: 3px solid black;
+     font-size: 25px;
+ }
+
+ #nav_cake.underline4 {
+     border-bottom: 3px solid black;
+     font-size: 25px;
+ }
 
 
 /* 메뉴 -------------------------------------------*/
@@ -52,10 +121,10 @@ div.coffee {
     /* 확인용 */
     /*border: 1px solid #aaa;*/
     float: left;
-    display: none;
+    display: inline-block;
 }
 
-div.non-coffee {
+div.noncoffee {
     padding: 60px 20px;
     width: 530px;
     height: 750px;
@@ -82,21 +151,21 @@ div.cake {
     /* 확인용 */
     /*border: 1px solid #aaa;*/
     float: left;
-    /*display: none;*/
+    display: none;
 }
 
- .coffee a, .non-coffee a, .sandwich a, .cake a {
+ .coffee a, .noncoffee a, .sandwich a, .cake a {
     padding: 60px 50px;
     /*border: 1px solid #aaa;*/
 }
 
-.coffee h5, .non-coffee h5, .sandwich h5, .cake h5 {
+.coffee h5, .noncoffee h5, .sandwich h5, .cake h5 {
     padding-top: 10px;
     padding-bottom: 20px;
     text-align: center;
 }
 
-.coffee img, .non-coffee img, .sandwich img, .cake img {
+.coffee img, .noncoffee img, .sandwich img, .cake img {
     border-radius: 50px;
     width: 140px;
 }
