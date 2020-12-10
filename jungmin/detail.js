@@ -1,10 +1,9 @@
 let nowitem;
+nowitem = JSON.parse(localStorage.getItem('coffee'))[3];
+console.log(nowitem);
+dt_page();
 $(document).ready(function() {
-    alert("hi");
-    nowitem = JSON.parse(localStorage.getItem('coffee'))[0];
-    console.log(nowitem);
-    dt_page();
-
+    dt_page()
     $('#dt_refresh').click(function() {
         alert('replace');
         location.replace('detail.html');
@@ -23,12 +22,12 @@ $("#dt_done").click(function() {
     let hotice = $hotice.value();
     console.log(hotice);
 });
-
+//선택상품으로 화면구성
 function dt_page() {
-
-    $("#dt_menuimg").attr();
-
-    //해당메뉴 그림과 이름 가격 적용
+    $("#dt_menuimg").attr('src', nowitem.img);
+    $("#dt_menu_name").text(nowitem.name);
+    $("#dt_menu_name_eng").text(nowitem.id);
+    $("#dt_money").text(nowitem.price);
 
 
 }
@@ -47,14 +46,28 @@ function dt_finish() {
         alert("size를 선택해 주세요");
         return true;
     }
-
-    if (size == "Tall") let money = 0;
-    else if (size == "Grande") let money = 500;
-    else let money = 1000;
+    let money;
+    if (size == "Tall") { money = 0; } else if (size == "Grande") { money = 500; } else { money = 1000; }
 
     let string = hotice + "/" + size + "+" + money + "원을 선택하셨습니다.";
     alert(string);
-
+    nowitem.hotice = hotice;
+    nowitem.size = size;
+    console.log(nowitem);
+    setmylist();
     $(document).location.replace('../jungeun/menuManager.html');
 
+}
+//장바구니 로컬 데이터에 넣기
+function setmylist() {
+    let totalList = []
+    if (localStorage.getItem('buyList') == null) { //하나만 있을 경우는 없으므로 그냥 한개만 확인해 판별
+        //바로넣기
+        totalList.push(nowitem);
+        localStorage.setItem('buyList', JSON.stringify(totalList));
+    } else {
+        totalList = JSON.parse(localStorage.getItem('buyList'));
+        totalList.push(nowitem);
+        localStorage.setItem('buyList', JSON.stringify(totalList));
+    }
 }
