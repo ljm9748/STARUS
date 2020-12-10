@@ -24,12 +24,77 @@
     <!--menu.js를 로드-->
     <script src="menu.js"></script>
     
+    <style>
+        .display_inline_block {
+            display: inline-block;
+        }
+        
+        .display_none {
+            display: none;
+        }
+        
+    </style>
+    
+    
+    <script>
+        
+        // navi.html 불러오기
+        $.(document).ready(function() {
+            document.getElementById("nav").innerHTML = '<object type="html" data="navi.html"></object>';
+        })
+        
+        
+        $('nav').ready(function() {
+            var htmlStr = $('body').html();
+            return htmlStr;
+        });
+        
+        $(document).ready(function() {
+           
+            // 세부메뉴를 클릭하면 해당 메뉴만 display
+           $('#nav_noncoffee').on({
+            
+               click: function() {
+                   
+                   $('tr').addClass('display_inline_block');
+                   $('#nav_coffee').removeAttr('display');
+               }
+               
+           }); 
+            
+            $('#nav_sandwitch').on({
+            
+               click: function() {
+                   
+                   $('tr').addClass('display_inline_block');
+                   $('#nav_coffee').removeAttr('display');
+               }
+               
+           });
+            
+            $('#nav_cake').on({
+            
+               click: function() {
+                   
+                   $('tr').addClass('display_inline_block');
+                   $('#nav_coffee').removeAttr('display');
+               }
+               
+           });
+            
+            
+        });
+    
+    </script>
+    
+    
 </head>
 
 <body>
     
-    <!-- NAV바 (임시용) ------------------------------->
-    <header><h2>STARUS</h2></header>
+    <!-- navi.html ------------------------------->
+    <nav id="nav"></nav>
+<!--    <header><h2>STARUS</h2></header>
     
     <nav>
         <table>
@@ -47,7 +112,7 @@
             
         </table>
     </nav>
-    
+    -->
    
     <!-- 메뉴 -------------------->
     <div class="menu">
