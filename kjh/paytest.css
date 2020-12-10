@@ -49,41 +49,79 @@
 /*    @확인용*/
 /*    border: 1px solid skyblue;*/
 
-    margin: 40px 80px 30px 80px;
+    margin: 40px 80px 10px 80px;
     font-size: 20px;
     font-weight: 700;
     color: #025940;
 }
 
-.orderthead>tr>td:first-child {
-    width: 451px;
+.othmenu {
+    width: 475px;
 }
 
-.orderthead>tr>td:not(:first-child) {
-    width: 77px;
+.oth {
+    width: 65px;
 }
 
 .orderlist {
 /*    @확인용*/
-    border: 1px solid skyblue;
-
+/*    border: 1px solid skyblue;*/
+    width: 605px;
+    margin: 20px 80px;
     height: 300px;
+}
+
+.orderlist::-webkit-scrollbar {
+    display: none;
 }
 
 .ordertbody {
 /*    @확인용*/
-    border: 1px solid skyblue;
-
-    margin: 0px 80px 20px 80px;
+/*    border: 1px solid skyblue;*/
+    font-weight: bold;
+    font-size: 18px;
 }
 
+.otft {
+    width: 450px;
+}
+
+.otft>img {
+    vertical-align: middle;
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}
+
+.ottd {
+    text-align: center;
+    width: 65px;
+}
+
+/*
 .ordertbody>tr>td:first-child {
+    @확인용
+    border: 1px solid pink;
     width: 451px;
 }
 
 .ordertbody>tr>td:not(:first-child) {
     width: 77px;
 }
+
+.ordertbody>tr>td:first-child>img {
+    border-radius: 15px;
+    margin-right: 20px;
+    vertical-align: middle;
+}
+*/
+
+/*
+.menuname {
+    margin-right: 15px;
+}
+*/
 
 
 
