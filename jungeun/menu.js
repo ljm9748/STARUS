@@ -1,4 +1,4 @@
-/* JSON Data*/
+// JSON Data -------------------------------------------
 
 
 let coffee = []
@@ -22,7 +22,7 @@ $(window).ready(function() {
 
 
 function parceJson() {
-    alert("parcing Start");
+    alert("Welcome to STARUS");
     $.get('../json/coffee.json', function(data) {
         localStorage.setItem("coffee", JSON.stringify(data));
         coffee = JSON.parse(localStorage.getItem('coffee'));
@@ -44,7 +44,7 @@ function parceJson() {
 }
 
 
-// NAVI 바
+// NAVI 바 -------------------------------------------
 
 $(document).ready(function() {
 
