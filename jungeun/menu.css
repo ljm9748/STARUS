@@ -112,8 +112,8 @@ body {
 
 /* 메뉴 -------------------------------------------*/
 
-.menu {
-    
+img:hover {
+    opacity: 0.4;
 }
 
 div.coffee {
@@ -270,6 +270,10 @@ td.t_right {
     border-radius: 10px;
 }
 
+#delete:hover {
+    background-color: black;
+}
+
 /*전체삭제 버튼*/
 #reset {
     width: 40%;
@@ -281,6 +285,10 @@ td.t_right {
     border-radius: 10px;
 }
 
+#reset:hover {
+    background-color: black;
+}
+
 
 
 /* 홈/주문 버튼 -------------------------------------*/
@@ -290,7 +298,7 @@ td.t_right {
     height: 90px;
     padding: 15px 70px;
     border-top: 3px solid #ddd;
-    font-size: 1.2em;
+    font-size: 1.1em;
     /* 확인용 */
     /*background-color: blanchedalmond;*/
 }
@@ -306,7 +314,21 @@ td.t_right {
     color: white;
 }
 
+#home:hover {
+   background-color: white;
+    color: black;
+    font-size: 1.3em;
+    border: 2px solid black;
+}
+
 #order {
     background-color: #025936;
     color: white;
+}
+
+#order:hover {
+   background-color: white;
+    color: black;
+    font-size: 1.3em;
+    border: 2px solid black;
 }

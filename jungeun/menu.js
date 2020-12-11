@@ -1,13 +1,13 @@
 // JSON Data -------------------------------------------
 
-
 let coffee = []
 let cake = []
 let noncoffee = []
 let sandwich = []
 
 $(window).ready(function() {
-    if (localStorage.getItem('noncoffee') == null) { //하나만 있을 경우는 없으므로 그냥 한개만 확인해 판별
+    if (localStorage.getItem('noncoffee') == null) { 
+                        // 하나만 있을 경우는 없으므로 그냥 한개만 확인해 판별
         parceJson();
     } else {
         coffee = JSON.parse(localStorage.getItem('coffee'));
@@ -17,7 +17,6 @@ $(window).ready(function() {
 
         console.log(coffee);
     }
-
 })
 
 
@@ -39,8 +38,6 @@ function parceJson() {
         localStorage.setItem("sandwich", JSON.stringify(data));
         sandwich = JSON.parse(localStorage.getItem('sandwich'));
     }, "json");
-
-
 }
 
 
