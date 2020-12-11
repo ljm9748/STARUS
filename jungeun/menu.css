@@ -185,7 +185,7 @@ div.cake {
 }
 
 .cartContent {
-    overflow: scroll;
+    overflow-y: auto;
     height: 600px;
     /*background-color: pink;*/
 }
@@ -201,20 +201,28 @@ div.cake {
     width: 100%;
     text-align: center;
     /* 확인용 */
-    /*border: 1px solid #aaa;*/
 }
 
-.cartItem td {
-/*    border: 1px solid #aaa;*/
+.cartItem td, .cartItem tr {
+    padding: 5px;
+    padding-left: 10px;
 }
 
-/*장바구니 메뉴*/
 .cartItem td:first-child {
-    width: 155px;
+    width: 65%;
 }
-.cartItem tr:nth-child(2n) td{
-/*    background-color: red;*/
-    padding-bottom: 5px;
+
+.cartItem img {
+    width: 15px;
+}
+
+.cartItem div.num1 {
+    text-align: right;
+}
+
+td.t_right {
+    text-align: right;
+    padding-left: 15px;
 }
 
 /*수량버튼*/
@@ -259,6 +267,7 @@ div.cake {
     position: relative;
     top: 10px;
     left: 15px;
+    border-radius: 10px;
 }
 
 /*전체삭제 버튼*/
@@ -269,6 +278,7 @@ div.cake {
     position: relative;
     top: 10px;
     left: 30px;
+    border-radius: 10px;
 }
 
 
@@ -280,6 +290,7 @@ div.cake {
     height: 90px;
     padding: 15px 70px;
     border-top: 3px solid #ddd;
+    font-size: 1.2em;
     /* 확인용 */
     /*background-color: blanchedalmond;*/
 }
