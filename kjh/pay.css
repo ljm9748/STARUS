@@ -16,6 +16,7 @@
     width: 765px;
     height: 1000px;
     margin: 100px;
+    border: 1px solid #ddd;
 }
 
 #payheader {
@@ -81,6 +82,8 @@
 /*    border: 1px solid skyblue;*/
     font-weight: bold;
     font-size: 18px;
+    border-collapse: separate;
+    border-spacing: 10px;
 }
 
 .otft {
