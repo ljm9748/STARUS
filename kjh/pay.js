@@ -57,7 +57,7 @@ window.onload = function () {
 
     var odsum = 0;
     for (var i = 0; i < ordermenu.length; i++) {
-        odsum += Number(ordermenu[i].price);
+        odsum += Number(ordermenu[i].price*ordermenu[i].count);
     }
 
     // 캐스팅
