@@ -11,7 +11,7 @@ window.onload = function () {
         sum = sum + Number(ordermenu[i].price);
     }
 
-
+    // 주문목록 출력
     var tbody = '';
 
     for (var i = 0; i < ordermenu.length; i++) {
@@ -53,38 +53,7 @@ window.onload = function () {
 
     }
 
-
-
-    // 주문 목록 보여주기
-    function showOderlist() {
-
-
-
-        //        // 주문 목록
-        //        var orderlistrow = document.querySelector('#orderlistrow');
-        //
-        //        var tbody = '';
-        //
-        //        for (var i = 0; i < ordermenu.length; i++) {
-        //            tbody += '<tr>';
-        //            tbody += '<td class="otft">';
-        //            tbody += '<img src="' + ordermenu[i].img + '">';
-        //            tbody += '<span>' + ordermenu[i].name + '</span>';
-        //            tbody += '<span>' + ordermenu[i].hotice + '</span>';
-        //            tbody += '<span>' + ordermenu[i].size + '</span>';
-        //            tbody += '</td>';
-        //            tbody += '<td class="ottd">'+ordermenu[i].count+'</td>';
-        //            tbody += '<td class="ottd">' + ordermenu[i].price + '원</td>';
-        //            tbody += '</tr>';
-        //        }
-        //
-        //        orderlistrow.innerHTML = tbody;
-
-
-    };
-
-
-    // 총 금액 보여주기
+    // 총 금액 출력
 
     var odsum = 0;
     for (var i = 0; i < ordermenu.length; i++) {

@@ -11,7 +11,7 @@
 /*%%%결제페이지 시작*/
 #paymentpage {
 /*    확인용*/
-    border: 1px solid blue;
+/*    border: 1px solid blue;*/
 
     width: 765px;
     height: 1000px;
@@ -103,64 +103,6 @@
     text-align: center;
     width: 65px;
 }
-
-
-/*
-.ordertbody>tr>td:first-child {
-    @확인용
-    border: 1px solid pink;
-    width: 451px;
-}
-
-.ordertbody>tr>td:not(:first-child) {
-    width: 77px;
-}
-
-.ordertbody>tr>td:first-child>img {
-    border-radius: 15px;
-    margin-right: 20px;
-    vertical-align: middle;
-}
-*/
-
-/*
-.menuname {
-    margin-right: 15px;
-}
-*/
-
-
-
-/*
-#orderlist>tr:first-child {
-    color: #025940;
-    font-size: 20px;
-끝
-}
-
-#orderlist>tr>th:first-child {
-    width: 451px;
-    text-align: left;
-끝
-}
-
-#orderlist>tr>th:not(:first-child) {
-    width: 77px;
-끝
-}
-
-#orderlist>tr>th:first-child>img {
-    height: 50px;
-    width: 50px;
-    border-radius: 20px;
-    vertical-align: middle;
-끝
-}
-
-#orderlist>tr>th:first-child>span {
-    margin-left: 20px;
-}
-*/
 
 /*총금액*/
 #pricesum {
