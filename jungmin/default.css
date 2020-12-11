@@ -135,6 +135,11 @@ hr {
     font-size: 1.2em;
 }
 
+.dt_brn:hover {
+    background-color: white;
+    color: black;
+}
+
 .dt_last input:nth-child(1) {
     margin-right: 30px;
 }
