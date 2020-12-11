@@ -13,19 +13,20 @@ function buy(){
 
         if(!buylist[i].isdrink) {
             console.log('푸드', buylist[i]);
-
+            
+            tbody += '<tbody>';
             tbody += '<tr>';
-            tbody += ' <td>' + buylist[i].name + '</td>';
-            tbody += ' <td>' + buylist[i].price + '</td>';
+            tbody += ' <td rowspan="2">' + buylist[i].name + '</td>';
+            tbody += ' <td>' + buylist[i].price + '원</td>';
             tbody += ' </tr>';
             tbody += ' <tr>';
-            tbody += ' <td></td>';
-            tbody += '<td>';
-            tbody += '<img class="plus" src="../images/icon/plus.png" width=15px id="'+i+'">';
+            tbody += '<td class="t_right">';
+            tbody += '<img class="plus" src="../images/icon/plus.png" id="'+i+'">';
             tbody += '<div class="num1" >'+buylist[i].count+'</div>';
-            tbody += '<img class="minus" src="../images/icon/minus.png" width=15px id="'+10000+i+'">';
+            tbody += '<img class="minus" src="../images/icon/minus.png" id="'+10000+i+'">';
             tbody += '</td>';
             tbody += '</tr>';
+            tbody += '</tbody>';
 
             listrow.innerHTML = tbody;
 
@@ -34,14 +35,14 @@ function buy(){
 
             tbody += '<tr>';
             tbody += ' <td>' + buylist[i].name + '</td>';
-            tbody += ' <td>' + buylist[i].price + '</td>';
+            tbody += ' <td>' + buylist[i].price + '원</td>';
             tbody += ' </tr>';
             tbody += ' <tr>';
-            tbody += ' <td>' + buylist[i].hotice +'/'+buylist[i].size+'</td>';
-            tbody += '<td>';
-            tbody += '<img class="plus" src="../images/icon/plus.png" width=15px id="'+i+'">';
-            tbody += '<div class="num1" >'+buylist[i].count+'</div>';
-            tbody += '<img class="minus" src="../images/icon/minus.png" width=15px id="'+10000+i+'">';
+            tbody += ' <td style="font-size:0.8em">(' + buylist[i].hotice +'/'+buylist[i].size+')</td>';
+            tbody += '<td class="t_right">';
+            tbody += '<img class="plus" src="../images/icon/plus.png" id="'+i+'"> ';
+            tbody += ' <div class="num1" >'+buylist[i].count+'</div> ';
+            tbody += ' <img class="minus" src="../images/icon/minus.png" id="'+10000+i+'">';
             tbody += '</td>';
             tbody += '</tr>';
 
