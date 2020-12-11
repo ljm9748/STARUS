@@ -60,6 +60,7 @@ body {
     float: left;
     text-align: center;
     margin-left: 60px;
+    font-size: 1.2em;
 }
 
 #dt_table2 img {
@@ -77,6 +78,7 @@ hr {
 .detail_bottom {
     margin: 40px;
     clear: both;
+    font-size: 1.2em;
 }
 
 .detail_bottom>h3 {
@@ -123,8 +125,9 @@ hr {
     background-color: #025940;
     color: white;
     text-align: center;
-    width: 180px;
+    width: 300px;
     height: 50px;
+    font-size: 1.2em;
 }
 
 .dt_last input:nth-child(1) {
