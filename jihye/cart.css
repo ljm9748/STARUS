@@ -1,3 +1,4 @@
+/*
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700;900&display=swap');
 * {
     margin: 0;
@@ -9,8 +10,10 @@
     width: 200px;
      background-color: #F2F2F2;
 }
+*/
+
 /*첫부분*/
-#carticon> img {
+/*#carticon> img {
     width:40px;
     height:40px;
     object-fit: contain;
@@ -29,8 +32,10 @@
     color: #025940;
     font-size: 23px;
     font-weight: 900;
-}
+}*/
+
 /*중간부분*/
+/*
 #menu {
     overflow:scroll;
     position:absolute;
@@ -78,9 +83,10 @@
     color: #002D47;
     font-weight: bold;
 }
+*/
 
 /*끝부분*/
-#foot {
+/*#foot {
     position: absolute;
     top:610px;
 }
@@ -145,4 +151,4 @@ a{
     border: 1px solid black;
     color: black;
     right: 20px;
-}
+}*/
