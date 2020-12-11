@@ -219,16 +219,12 @@ div.cake {
 
 /*수량버튼*/
 .num1 {
-    line-height: 110%;
+    margin: 0px 5px;
+    line-height: 100%;
 }
 
-.plus, .num1 {
+.plus, .num1, .minus {
     float: left;
-    margin-right: 7px;
-}
-
-.minus {
-    float: right;
 }
 
 /* 총주문금액/초기화 전체 */
