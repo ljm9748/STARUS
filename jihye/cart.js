@@ -7,27 +7,50 @@ var listrow = document.querySelector('#listrow');
 
 //함수로 바꿔서
 function buy(){
-var tbody = '';
-for (var i = 0; i < buylist.length; i++) {
-    //tbody += members[i].makeHtml(i);
+    var tbody = '';
+    for (var i = 0; i < buylist.length; i++) {
+        //tbody += members[i].makeHtml(i);
 
-    tbody += '<tr>';
-    tbody += ' <td>' + buylist[i].name + '</td>';
-    tbody += ' <td>' + buylist[i].price + '</td>';
-    tbody += ' </tr>';
-    tbody += ' <tr>';
-    tbody += ' <td>' + buylist[i].hotice +'/'+buylist[i].size+'</td>';
-    tbody += '<td>';
-    tbody += '<img class="plus" src="../images/icon/plus.png" width=15px id="'+i+'">';
-    tbody += '<div class="num1" >'+buylist[i].count+'</div>';
-    tbody += '<img class="minus" src="../images/icon/minus.png" width=15px id="'+10000+i+'">';
-    tbody += '</td>';
-    tbody += '</tr>';
+        if(!buylist[i].isdrink) {
+            console.log('푸드', buylist[i]);
 
+            tbody += '<tr>';
+            tbody += ' <td>' + buylist[i].name + '</td>';
+            tbody += ' <td>' + buylist[i].price + '</td>';
+            tbody += ' </tr>';
+            tbody += ' <tr>';
+            tbody += ' <td></td>';
+            tbody += '<td>';
+            tbody += '<img class="plus" src="../images/icon/plus.png" width=15px id="'+i+'">';
+            tbody += '<div class="num1" >'+buylist[i].count+'</div>';
+            tbody += '<img class="minus" src="../images/icon/minus.png" width=15px id="'+10000+i+'">';
+            tbody += '</td>';
+            tbody += '</tr>';
+
+            listrow.innerHTML = tbody;
+
+        } else {
+            console.log('음료', buylist[i]);
+
+            tbody += '<tr>';
+            tbody += ' <td>' + buylist[i].name + '</td>';
+            tbody += ' <td>' + buylist[i].price + '</td>';
+            tbody += ' </tr>';
+            tbody += ' <tr>';
+            tbody += ' <td>' + buylist[i].hotice +'/'+buylist[i].size+'</td>';
+            tbody += '<td>';
+            tbody += '<img class="plus" src="../images/icon/plus.png" width=15px id="'+i+'">';
+            tbody += '<div class="num1" >'+buylist[i].count+'</div>';
+            tbody += '<img class="minus" src="../images/icon/minus.png" width=15px id="'+10000+i+'">';
+            tbody += '</td>';
+            tbody += '</tr>';
+
+            listrow.innerHTML = tbody;    
+
+        }
+    }
 }
-
-listrow.innerHTML = tbody;
-}
+     
 buy();
 
 
