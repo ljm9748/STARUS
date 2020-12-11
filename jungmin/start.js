@@ -1,4 +1,4 @@
-let coffee = []
+/*let coffee = []
 let cake = []
 let noncoffee = []
 let sandwich = []
@@ -38,4 +38,4 @@ function parceJson() {
     }, "json");
 
 
-}
+}*/

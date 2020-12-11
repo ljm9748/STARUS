@@ -5,8 +5,8 @@ dt_page();
 $(document).ready(function() {
     dt_page()
     $('#dt_refresh').click(function() {
-        alert('replace');
-        location.replace('detail.html');
+        alert('메뉴로 돌아갑니다.');
+        location.replace('../jungeun/menuManager.html');
     });
 
     $('#dt_finish').click(function() {

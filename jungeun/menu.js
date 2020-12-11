@@ -204,10 +204,5 @@ $(document).ready(function() {
         location.replace('../uri/mainpage.html');
     });
 
-    // 주문 버튼 이벤트 : 클릭 시 결제 가능한 pay 페이지 로드
-    $('#order').on('click', function() {
-        location.replace('');
-    });
-
 
 });
