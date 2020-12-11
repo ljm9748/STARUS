@@ -185,6 +185,7 @@ div.cake {
 }
 
 .cartContent {
+    overflow: scroll;
     height: 600px;
     /*background-color: pink;*/
 }
