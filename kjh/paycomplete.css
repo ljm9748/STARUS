@@ -40,7 +40,8 @@
 #main_wrap {
     width: 765px;
     height: 1000px;
-    border: 1px solid black;
+    margin: 100px;
+    
     position:relative;
 }
 
