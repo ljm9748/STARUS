@@ -218,8 +218,11 @@ div.cake {
 }
 
 /*수량버튼*/
+.plus, .minus {
+    width: 30%;
+}
 .num1 {
-    margin: 0px 5px;
+    margin: 0px 9%;
     line-height: 100%;
 }
 
