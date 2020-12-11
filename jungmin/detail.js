@@ -55,6 +55,7 @@ function dt_finish() {
 
         let string = hotice + "/" + size + "+" + money + "원을 선택하셨습니다.";
         alert(string);
+        nowitem.price = money + nowitem.price;
         nowitem.hotice = hotice;
         nowitem.size = size;
     }
