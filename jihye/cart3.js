@@ -1,4 +1,3 @@
- $(document).ready(function() {
 //로컬에서 배열을 가지고 옴
 var buylist = JSON.parse(localStorage.getItem('buyList'));
 console.log(buylist);
@@ -16,11 +15,11 @@ for (var i = 0; i < buylist.length; i++) {
     tbody += ' <td>' + buylist[i].price + '</td>';
     tbody += ' </tr>';
     tbody += ' <tr>';
-    tbody += ' <td>' + buylist[i].hotice +'/'+buylist[i].size+'</td>';
+    tbody += ' <td>' + buylist[i].hotice + '</td>';
     tbody += '<td>';
-    tbody += '<img class="plus" src="../images/icon/plus.png" width=15px id="'+i+'">';
+    tbody += '<div class="minus" id="'+1000+i+'"></div>';
     tbody += '<div class="num1" >'+buylist[i].count+'</div>';
-    tbody += '<img class="minus" src="../images/icon/minus.png" width=15px id="'+1000+i+'">';
+    tbody += '<div class="plus" id="'+i+'"></div>';
     tbody += '</td>';
     tbody += '</tr>';
 
@@ -31,18 +30,13 @@ listrow.innerHTML = tbody;
 buy();
 
 
-//선택 삭제
-$('#delete').click(function(){
+
+
+$('#text5').click(function(){
         alert("준비중입니다^^");
-});
-     
-//전체 삭제
-$('#reset').click(function(){
-    localStorage.clear();
-    location.reload();
-});
-     
-     
+    
+})
+
 //버튼
 
 $(".plus").click(function() {
@@ -65,7 +59,6 @@ $(".minus").click(function() {
 
 });
 
-
 //금액부분
 var money =0; 
 var sum = 0;
@@ -79,10 +72,5 @@ for(var i = 0; i < buylist.length; i++) {
 text3.innerHTML=sum+'원';
 
 
-//주문하기 버튼
-$('#order').click(function(){
-    location.replace('../kjh/pay.html');   
-   localStorage.setItem('buyList', JSON.stringify(buylist));
-});
-     
-});
+
+//결제하기localStorage.setItem('buyList', JSON.stringify(buylist));
