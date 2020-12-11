@@ -44,14 +44,29 @@
     width: 174px;
     font-size: 15px;
 }
-#table input {
-    width: 20px;
+
+.minus{
+    position: absolute;
+    right: 47px;
+    width: 15px;
+    height: 20px;
+    border: 1px solid red;
+    background-color: red;
+    
+}
+.plus{
+    position: absolute;
+    right: 1px;
+    width: 15px;
+    height: 20px;
+    border: 1px solid black;
+    background-color: blue;
 }
 .td2 {
      text-align: right;
 }
 .td4 {
-     text-align: right;
+
 }
 .td1 {
     text-align: center;
@@ -81,7 +96,6 @@ font-weight: bolder;
 left:10px;
 top:5px;
 color: #282828;
-\  
 }
 
 #text3 {
@@ -118,7 +132,17 @@ font-weight: bolder;
     text-align: center;
     line-height: 33px;
     color: white;
+    cursor:pointer;
 }
 a{
     text-decoration: none;
+}
+
+.num1, .num2{
+    position: absolute;
+    width:17px;
+    height: 20px;
+    border: 1px solid black;
+    color: black;
+    right: 20px;
 }
