@@ -46,21 +46,16 @@ $('#reset').click(function(){
 //버튼
 
 $(".plus").click(function() {
-  /*  alert(this.id);*/
-    //숫자로 바꾸기
     var now = Number(this.id);
-    /*alert(now);*/
-    //now를 숫자로 바꾼후
-    //코드를불러 
+
     buylist[now].count+=1;
+    console.log(buylist[now]);
     buy();
 });
 $(".minus").click(function() {
    var now = Number(this.id)-10000;
-  /*  alert(now);*/
     buylist[now].count-=1;
-    console.log(buylist);
-    
+    //console.log(buylist);
     buy();
 
 });
