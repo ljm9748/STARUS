@@ -6,10 +6,11 @@
 }
 
 body {
-    width: 765px;
+    padding-left: 20px;
+    width: 750px;
     height: 1000px;
     margin: 100px;
-    border: 3px solid #025940;
+    border: 20px solid #025940;
     font-family: 'Noto Sans KR', sans-serif;
 }
 
@@ -31,7 +32,7 @@ body {
 }
 
 .detail_top {
-    margin: 40px;
+    margin: 50px;
     margin-top: 60px;
 }
 
@@ -117,16 +118,20 @@ hr {
 }
 
 .dt_last {
-    margin-top: 200px;
+    position: absolute;
+    top: 950px;
+    left: 190px;
     text-align: center;
 }
 
 .dt_btn {
     background-color: #025940;
     color: white;
+    border-radius: 30px;
     text-align: center;
+    font-weight: bolder;
     width: 300px;
-    height: 50px;
+    height: 80px;
     font-size: 1.2em;
 }
 
