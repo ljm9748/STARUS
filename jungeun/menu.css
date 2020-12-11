@@ -205,7 +205,30 @@ div.cake {
 }
 
 .cartItem td {
-    /*border: 1px solid #aaa;*/
+/*    border: 1px solid #aaa;*/
+}
+
+/*장바구니 메뉴*/
+.cartItem td:first-child {
+    width: 155px;
+}
+.cartItem tr:nth-child(2n) td{
+/*    background-color: red;*/
+    padding-bottom: 5px;
+}
+
+/*수량버튼*/
+.num1 {
+    line-height: 110%;
+}
+
+.plus, .num1 {
+    float: left;
+    margin-right: 7px;
+}
+
+.minus {
+    float: right;
 }
 
 /* 총주문금액/초기화 전체 */
