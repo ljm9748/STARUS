@@ -50,15 +50,17 @@ $(".plus").click(function() {
 
     buylist[now].count+=1;
     console.log(buylist[now]);
+/*    localStorage.setItem('buyList', JSON.stringify(buylist));*/
     buy();
-
+ /*   location.reload();*/
 });
 $(".minus").click(function() {
    var now = Number(this.id)-10000;
     buylist[now].count-=1;
-    //console.log(buylist);
-    buy();
- 
+  /*  localStorage.setItem('buyList', JSON.stringify(buylist));
+    //console.log(buylist);*/
+    buy();/*
+    location.reload();*/
 
 });
 
